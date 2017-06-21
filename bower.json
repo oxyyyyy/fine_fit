@@ -1,0 +1,20 @@
+{
+  "name": "fine_fit",
+  "description": "Landing-page",
+  "main": "index.html",
+  "authors": [
+    "Alexandr Vlasenko <olexandr.vlasenko@gmail.com> (http://a-vlasenko.zzz.com.ua/)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/oxyyyyy/fine_fit",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6"
+  }
+}
