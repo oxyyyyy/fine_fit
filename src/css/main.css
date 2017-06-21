@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,latin-ext");
+@media (min-width: 992px) {
+  .container {
+    width: 992px; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 768px; } }
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    width: 576px; } }
+
+body {
+  font: 300 24px "Roboto", sans-serif;
+  color: #fff;
+  background-color: #111c49; }
+
+h1 {
+  font: 900 80px "Roboto", sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 2px #83cf66, 2px 0 2px #83cf66, -2px 0 2px #83cf66, 0 -2px 2px #83cf66, 2px 2px 2px #83cf66, -2px 2px 2px #83cf66, 2px -2px 2px #83cf66, -2px -2px 2px #83cf66; }
+  @media (max-width: 991px) {
+    h1 {
+      font-size: 60px; } }
+  @media (max-width: 575px) {
+    h1 {
+      font-size: 36px; } }
+
+h2.section_title {
+  font: 900 40px "Roboto", sans-serif;
+  margin: 0; }
+  @media (max-width: 991px) {
+    h2.section_title {
+      font-size: 30px; } }
+  @media (max-width: 575px) {
+    h2.section_title {
+      font-size: 24px; } }
+
+p {
+  font: 400 18px "Roboto", sans-serif;
+  margin: 0; }
+
+p.bold {
+  font-weight: 900; }
+
+p.highlight {
+  color: #f8f903; }
+
+p.warning {
+  font: 400 13px "Roboto", sans-serif;
+  display: inline-block; }
+  p.warning span {
+    font: 500 18px "Roboto", sans-serif;
+    text-transform: uppercase;
+    color: #ff1844; }
+  @media (max-width: 575px) {
+    p.warning {
+      font-size: 12px; } }
+
+.warning_overlay {
+  background-color: rgba(21, 22, 35, 0.7);
+  margin-top: 5px;
+  padding: 15px 20px; }
+  .warning_overlay img {
+    margin-right: 15px; }
+
+.header_top_text {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #f8f903;
+  background: -webkit-linear-gradient(to bottom, #fafa01 0%, #fadc1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+  @media (max-width: 991px) {
+    .header_top_text {
+      font-size: 23px; } }
+  @media (max-width: 575px) {
+    .header_top_text {
+      font-size: 18px; } }
+
+.after_title {
+  font: 700 24px "Roboto", sans-serif;
+  text-transform: uppercase;
+  margin: 0 20px; }
+  @media (max-width: 991px) {
+    .after_title {
+      font-size: 18px; } }
+  @media (max-width: 575px) {
+    .after_title {
+      font-size: 13px; } }

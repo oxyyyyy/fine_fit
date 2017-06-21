@@ -1,0 +1,99 @@
+// Import variables and font setup
+
+@import fonts
+@import vars
+
+// Editing containers
+@media (min-width: 992px)
+  .container
+    width: 992px
+@media (min-width: 768px) and (max-width: 991px)
+  .container
+    width: 768px
+@media (min-width: 576px) and (max-width: 767px)
+  .container
+    width: 576px
+
+// ------------------------------------ General styles ------------------------------------
+
+// Body styles
+body
+  font: 300 24px $font-stack
+  color: $white
+  background-color: #111c49
+
+// Typo styles
+h1
+  font: 900 80px $font-stack
+  text-transform: uppercase
+  white-space: nowrap
+  margin: 0
+  color: $white
+  // XXX: Gradient text works only in -webkit browsers!
+  // background: $silver_white_webkit_gradient
+  // -webkit-background-clip: text
+  // -webkit-text-fill-color: transparent
+  text-shadow: 0 2px 2px #83cf66, 2px 0 2px #83cf66, -2px 0 2px #83cf66, 0 -2px 2px #83cf66, 2px 2px 2px #83cf66, -2px 2px 2px #83cf66, 2px -2px 2px #83cf66, -2px -2px 2px #83cf66
+  @media (max-width: $md_screen)
+    font-size: 60px
+  @media (max-width: $sm_screen)
+    font-size: 36px
+h2.section_title
+  font: 900 40px $font-stack
+  margin: 0
+  @media (max-width: $md_screen)
+    font-size: 30px
+  @media (max-width: $sm_screen)
+    font-size: 24px
+
+p
+  font: 400 18px $font-stack
+  margin: 0
+p.bold
+  font-weight: 900
+p.highlight
+  color: $accent_color_1
+p.warning
+  font: 400 13px $font-stack
+  display: inline-block
+  span
+    font: 500 18px $font-stack
+    text-transform: uppercase
+    color: $warning_color
+  @media (max-width: $sm_screen)
+    font-size: 12px
+
+// Overlays
+.warning_overlay
+  background-color: $warning_bg_color
+  margin-top: 5px
+  padding: 15px 20px
+  img
+    margin-right: 15px
+
+// ------------------------------------ Sections' styles ------------------------------------
+
+// Header
+.header_top_text
+  font-size: 30px
+  text-transform: uppercase
+  text-align: center
+  margin-top: 20px
+  margin-bottom: 15px
+  color: $accent_color_1
+  // XXX: Gradient text works only in -webkit browsers!
+  background: $accent_color_1_webkit_gradient
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  @media (max-width: $md_screen)
+    font-size: 23px
+  @media (max-width: $sm_screen)
+    font-size: 18px
+.after_title
+  font: 700 24px $font-stack
+  text-transform: uppercase
+  margin: 0 20px
+  @media (max-width: $md_screen)
+    font-size: 18px
+  @media (max-width: $sm_screen)
+    font-size: 13px
