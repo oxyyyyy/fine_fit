@@ -20,7 +20,6 @@
 body
   font: 300 24px $font-stack
   color: $white
-  background-color: #111c49
 
 // Typo styles
 h1
@@ -64,29 +63,74 @@ p.warning
 ul
   list-style-type: none
   padding: 0
+  margin: 0
   li
-    padding: 7px
+    padding: 12px 8px
     margin: 5px 0
 
 // Overlays
 .warning_overlay
   background-color: $warning_bg_color
-  margin-top: 5px
   padding: 15px 20px
+  box-shadow: $warning_overlay_shadow
   img
     margin-right: 15px
+
+// Buttons
+.btn_main
+  display: inline-flex
+  padding: 22px 45px
+  margin-bottom: 3px
+  text-transform: uppercase
+  text-decoration: none
+  border-radius: 12px
+  background: $btn_main_bg_gradient
+  box-shadow: $btn_main_shadow
+  // XXX: I cant use inset box-shadow with gradient!
+  // box-shadow: inset 0px 0px 0px 2px $btn_main_border_gradient
+  transition: $main_trans_prop
+  &:hover, &:focus, &:active, &:visited
+    text-decoration: none
+  &:hover
+    margin-top: 3px
+    margin-bottom: 0
+    background: $btn_main_hovered_bg_gradient
+    box-shadow: none
+    p
+      // NOTE: Gradient text works only in -webkit browsers!
+      background: $btn_main_hovered_text_webkit_gradient
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+  p
+    font: 900 30px $font-stack
+    color: $btn_main_text_color
+    // NOTE: Gradient text works only in -webkit browsers!
+    background: $btn_main_text_webkit_gradient
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
 
 // ------------------------------------ Sections' styles ------------------------------------
 
 // Header
+header
+  padding-top: 5px
+  background-image: url("../img/backgrounds/header_bg.png")
+  background-size: cover
+  background-position: 13% center
+  @media (max-width: $md_screen)
+    background-position: 42% center
+  @media (max-width: $sm_screen)
+    background-position: 67% center
 .header_top_text
   font-size: 30px
   text-transform: uppercase
-  text-align: center
+  letter-spacing: 0.04vw
+  @media (max-width: $md-sm_screen)
+    text-align: center
   margin-top: 20px
   margin-bottom: 15px
   color: $accent_color_1
-  // XXX: Gradient text works only in -webkit browsers!
+  // NOTE: Gradient text works only in -webkit browsers!
   background: $accent_color_1_webkit_gradient
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
@@ -99,11 +143,20 @@ ul
 .header_after_title
   font: 700 24px $font-stack
   text-transform: uppercase
-  margin: 0 20px
   @media (max-width: $md_screen)
     font-size: 18px
+    letter-spacing: 1px
   @media (max-width: $sm_screen)
-    font-size: 13px
+    font-size: 11px
+    letter-spacing: 0.5px
+.header_medals_container
+  margin: 0
+  @media (max-width: $md-sm_screen)
+    margin-left: 80px
+    margin-top: 38px
+  @media (max-width: $sm_screen)
+    margin-left: 15px
+    margin-top: 15px
 .header_medal
   margin: 15px
   @media (max-width: $sm_screen)
@@ -146,21 +199,22 @@ ul
 .header_points
   text-transform: uppercase
   max-width: 365px
-  margin-left: 60px
+  margin-bottom: 45px
   @media (max-width: $sm_screen)
     margin-left: 0
   .header_point
+    max-width: 89%
     background-color: $header_point_bg
     .check_mark
       margin: 0 10px
-      transform: skewX(30deg)
+      transform: skewX(20deg)
     p
       font: 700 15px $font-stack
-      transform: skewX(30deg)
+      transform: skewX(20deg)
       @media (max-width: $sm_screen)
         font-size: 13px
 .skewed_bullet
-  transform: skewX(-30deg)
+  transform: skewX(-20deg)
   &::after
     content: ""
     position: absolute
@@ -173,11 +227,11 @@ ul
     content: ""
     position: absolute
     top: 0
-    right: -15px
-    transform: skewX(50deg)
+    right: -19px
+    transform: skewX(37deg)
     width: 30px
     height: 50%
     background-color: $header_point_bg
   &:first-child
     &::before
-      right: -19px
+      right: -21px

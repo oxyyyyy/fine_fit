@@ -13,8 +13,7 @@
 
 body {
   font: 300 24px "Roboto", sans-serif;
-  color: #fff;
-  background-color: #111c49; }
+  color: #fff; }
 
 h1 {
   font: 900 80px "Roboto", sans-serif;
@@ -63,28 +62,72 @@ p.warning {
 
 ul {
   list-style-type: none;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
   ul li {
-    padding: 7px;
+    padding: 12px 8px;
     margin: 5px 0; }
 
 .warning_overlay {
   background-color: rgba(21, 22, 35, 0.7);
-  margin-top: 5px;
-  padding: 15px 20px; }
+  padding: 15px 20px;
+  box-shadow: 0px 0px 10px 0px #172c4b; }
   .warning_overlay img {
     margin-right: 15px; }
+
+.btn_main {
+  display: inline-flex;
+  padding: 22px 45px;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 12px;
+  background: linear-gradient(to top, #fad61f 0%, #fb9d31 7%, #fafa03 93%, #fad221 100%);
+  box-shadow: 0px 8px 0px -3px #7c4304;
+  transition: all 0.5s ease-out; }
+  .btn_main:hover, .btn_main:focus, .btn_main:active, .btn_main:visited {
+    text-decoration: none; }
+  .btn_main:hover {
+    margin-top: 3px;
+    margin-bottom: 0;
+    background: linear-gradient(to top, #fad61f 0%, #fb9d31 7%, #f9d612 93%, #fad221 100%);
+    box-shadow: none; }
+    .btn_main:hover p {
+      background: -webkit-linear-gradient(to bottom, #253fa4 0%, #3a61ff 99%, #3a61ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+  .btn_main p {
+    font: 900 30px "Roboto", sans-serif;
+    color: #132054;
+    background: -webkit-linear-gradient(90deg, #132054 0%, #3a61ff 99%, #3a61ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+
+header {
+  padding-top: 5px;
+  background-image: url("../img/backgrounds/header_bg.png");
+  background-size: cover;
+  background-position: 13% center; }
+  @media (max-width: 991px) {
+    header {
+      background-position: 42% center; } }
+  @media (max-width: 575px) {
+    header {
+      background-position: 67% center; } }
 
 .header_top_text {
   font-size: 30px;
   text-transform: uppercase;
-  text-align: center;
+  letter-spacing: 0.04vw;
   margin-top: 20px;
   margin-bottom: 15px;
   color: #f8f903;
   background: -webkit-linear-gradient(to bottom, #fafa01 0%, #fadc1a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
+  @media (max-width: 767px) {
+    .header_top_text {
+      text-align: center; } }
   @media (max-width: 991px) {
     .header_top_text {
       font-size: 23px; } }
@@ -97,14 +140,26 @@ ul {
 
 .header_after_title {
   font: 700 24px "Roboto", sans-serif;
-  text-transform: uppercase;
-  margin: 0 20px; }
+  text-transform: uppercase; }
   @media (max-width: 991px) {
     .header_after_title {
-      font-size: 18px; } }
+      font-size: 18px;
+      letter-spacing: 1px; } }
   @media (max-width: 575px) {
     .header_after_title {
-      font-size: 13px; } }
+      font-size: 11px;
+      letter-spacing: 0.5px; } }
+
+.header_medals_container {
+  margin: 0; }
+  @media (max-width: 767px) {
+    .header_medals_container {
+      margin-left: 80px;
+      margin-top: 38px; } }
+  @media (max-width: 575px) {
+    .header_medals_container {
+      margin-left: 15px;
+      margin-top: 15px; } }
 
 .header_medal {
   margin: 15px; }
@@ -156,24 +211,25 @@ ul {
 .header_points {
   text-transform: uppercase;
   max-width: 365px;
-  margin-left: 60px; }
+  margin-bottom: 45px; }
   @media (max-width: 575px) {
     .header_points {
       margin-left: 0; } }
   .header_points .header_point {
+    max-width: 89%;
     background-color: rgba(19, 32, 84, 0.8); }
     .header_points .header_point .check_mark {
       margin: 0 10px;
-      transform: skewX(30deg); }
+      transform: skewX(20deg); }
     .header_points .header_point p {
       font: 700 15px "Roboto", sans-serif;
-      transform: skewX(30deg); }
+      transform: skewX(20deg); }
       @media (max-width: 575px) {
         .header_points .header_point p {
           font-size: 13px; } }
 
 .skewed_bullet {
-  transform: skewX(-30deg); }
+  transform: skewX(-20deg); }
   .skewed_bullet::after {
     content: "";
     position: absolute;
@@ -186,10 +242,10 @@ ul {
     content: "";
     position: absolute;
     top: 0;
-    right: -15px;
-    transform: skewX(50deg);
+    right: -19px;
+    transform: skewX(37deg);
     width: 30px;
     height: 50%;
     background-color: rgba(19, 32, 84, 0.8); }
   .skewed_bullet:first-child::before {
-    right: -19px; }
+    right: -21px; }
