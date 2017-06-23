@@ -45,7 +45,6 @@ h2.section_title
     font-size: 30px
   @media (max-width: $sm_screen)
     font-size: 24px
-
 p
   font: 400 18px $font-stack
   margin: 0
@@ -62,6 +61,12 @@ p.warning
     color: $warning_color
   @media (max-width: $sm_screen)
     font-size: 12px
+ul
+  list-style-type: none
+  padding: 0
+  li
+    padding: 7px
+    margin: 5px 0
 
 // Overlays
 .warning_overlay
@@ -89,7 +94,9 @@ p.warning
     font-size: 23px
   @media (max-width: $sm_screen)
     font-size: 18px
-.after_title
+.header_title_container
+  margin-bottom: 20px
+.header_after_title
   font: 700 24px $font-stack
   text-transform: uppercase
   margin: 0 20px
@@ -97,3 +104,80 @@ p.warning
     font-size: 18px
   @media (max-width: $sm_screen)
     font-size: 13px
+.header_medal
+  margin: 15px
+  @media (max-width: $sm_screen)
+    margin: 5px
+    max-width: 55px
+.header_bottles_container
+  position: relative
+  @media (max-width: $sm_screen)
+    margin: 0 35px 0 auto
+  .two_bottles
+    // position: absolute
+    position: relative
+    margin-top: 75px
+    @media (max-width: $sm_screen)
+      width: 180px
+      margin-top: 15px
+  .molekul
+    position: absolute
+    top: 225px
+    left: -30px
+    @media (max-width: $md_screen)
+      top: 255px
+      left: 225px
+      width: 140px
+    @media (max-width: $sm_screen)
+      top: 125px
+      left: 125px
+      width: 100px
+  .percent_50_medal
+    position: absolute
+    top: 10px
+    left: 75px
+    @media (max-width: $md_screen)
+      top: 60px
+      left: 230px
+    @media (max-width: $sm_screen)
+      top: 0px
+      left: 135px
+      width: 85px
+.header_points
+  text-transform: uppercase
+  max-width: 365px
+  margin-left: 60px
+  @media (max-width: $sm_screen)
+    margin-left: 0
+  .header_point
+    background-color: $header_point_bg
+    .check_mark
+      margin: 0 10px
+      transform: skewX(30deg)
+    p
+      font: 700 15px $font-stack
+      transform: skewX(30deg)
+      @media (max-width: $sm_screen)
+        font-size: 13px
+.skewed_bullet
+  transform: skewX(-30deg)
+  &::after
+    content: ""
+    position: absolute
+    right: -30px
+    bottom: 0
+    width: 30px
+    height: 50%
+    background-color: $header_point_bg
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    right: -15px
+    transform: skewX(50deg)
+    width: 30px
+    height: 50%
+    background-color: $header_point_bg
+  &:first-child
+    &::before
+      right: -19px

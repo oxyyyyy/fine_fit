@@ -61,6 +61,13 @@ p.warning {
     p.warning {
       font-size: 12px; } }
 
+ul {
+  list-style-type: none;
+  padding: 0; }
+  ul li {
+    padding: 7px;
+    margin: 5px 0; }
+
 .warning_overlay {
   background-color: rgba(21, 22, 35, 0.7);
   margin-top: 5px;
@@ -85,13 +92,104 @@ p.warning {
     .header_top_text {
       font-size: 18px; } }
 
-.after_title {
+.header_title_container {
+  margin-bottom: 20px; }
+
+.header_after_title {
   font: 700 24px "Roboto", sans-serif;
   text-transform: uppercase;
   margin: 0 20px; }
   @media (max-width: 991px) {
-    .after_title {
+    .header_after_title {
       font-size: 18px; } }
   @media (max-width: 575px) {
-    .after_title {
+    .header_after_title {
       font-size: 13px; } }
+
+.header_medal {
+  margin: 15px; }
+  @media (max-width: 575px) {
+    .header_medal {
+      margin: 5px;
+      max-width: 55px; } }
+
+.header_bottles_container {
+  position: relative; }
+  @media (max-width: 575px) {
+    .header_bottles_container {
+      margin: 0 35px 0 auto; } }
+  .header_bottles_container .two_bottles {
+    position: relative;
+    margin-top: 75px; }
+    @media (max-width: 575px) {
+      .header_bottles_container .two_bottles {
+        width: 180px;
+        margin-top: 15px; } }
+  .header_bottles_container .molekul {
+    position: absolute;
+    top: 225px;
+    left: -30px; }
+    @media (max-width: 991px) {
+      .header_bottles_container .molekul {
+        top: 255px;
+        left: 225px;
+        width: 140px; } }
+    @media (max-width: 575px) {
+      .header_bottles_container .molekul {
+        top: 125px;
+        left: 125px;
+        width: 100px; } }
+  .header_bottles_container .percent_50_medal {
+    position: absolute;
+    top: 10px;
+    left: 75px; }
+    @media (max-width: 991px) {
+      .header_bottles_container .percent_50_medal {
+        top: 60px;
+        left: 230px; } }
+    @media (max-width: 575px) {
+      .header_bottles_container .percent_50_medal {
+        top: 0px;
+        left: 135px;
+        width: 85px; } }
+
+.header_points {
+  text-transform: uppercase;
+  max-width: 365px;
+  margin-left: 60px; }
+  @media (max-width: 575px) {
+    .header_points {
+      margin-left: 0; } }
+  .header_points .header_point {
+    background-color: rgba(19, 32, 84, 0.8); }
+    .header_points .header_point .check_mark {
+      margin: 0 10px;
+      transform: skewX(30deg); }
+    .header_points .header_point p {
+      font: 700 15px "Roboto", sans-serif;
+      transform: skewX(30deg); }
+      @media (max-width: 575px) {
+        .header_points .header_point p {
+          font-size: 13px; } }
+
+.skewed_bullet {
+  transform: skewX(-30deg); }
+  .skewed_bullet::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 30px;
+    height: 50%;
+    background-color: rgba(19, 32, 84, 0.8); }
+  .skewed_bullet::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    transform: skewX(50deg);
+    width: 30px;
+    height: 50%;
+    background-color: rgba(19, 32, 84, 0.8); }
+  .skewed_bullet:first-child::before {
+    right: -19px; }
