@@ -11,9 +11,19 @@
   .container {
     width: 576px; } }
 
+* {
+  transition: all 0.5s ease-out; }
+
 body {
   font: 300 24px "Roboto", sans-serif;
-  color: #fff; }
+  color: #fff;
+  overflow-x: hidden; }
+
+section {
+  padding-top: 10px;
+  overflow-x: hidden; }
+  section p {
+    margin-bottom: 30px; }
 
 h1 {
   font: 900 80px "Roboto", sans-serif;
@@ -31,7 +41,11 @@ h1 {
 
 h2.section_title {
   font: 900 40px "Roboto", sans-serif;
-  margin: 0; }
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-left: 300px;
+  transform: skewX(20deg); }
   @media (max-width: 991px) {
     h2.section_title {
       font-size: 30px; } }
@@ -40,14 +54,19 @@ h2.section_title {
       font-size: 24px; } }
 
 p {
-  font: 400 18px "Roboto", sans-serif;
-  margin: 0; }
+  font: 300 18px "Roboto", sans-serif;
+  margin: 0;
+  text-align: justify; }
 
-p.bold {
-  font-weight: 900; }
+p.bold, span.bold {
+  font-weight: 900;
+  text-transform: uppercase; }
 
-p.highlight {
+p.highlight, span.highlight {
   color: #f8f903; }
+
+p.green, span.green {
+  color: #83cf66; }
 
 p.warning {
   font: 400 13px "Roboto", sans-serif;
@@ -59,6 +78,19 @@ p.warning {
   @media (max-width: 575px) {
     p.warning {
       font-size: 12px; } }
+
+.arrow_text .arrow_title {
+  font: 900 24px "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #f8f903;
+  text-shadow: 2px 2px 1px #008d5a; }
+
+.arrow_text .arrow_subtitle {
+  font-weight: 700; }
+
+.arrow_text .arrow_default {
+  font-weight: 900;
+  text-transform: uppercase; }
 
 ul {
   list-style-type: none;
@@ -75,6 +107,13 @@ ul {
   .warning_overlay img {
     margin-right: 15px; }
 
+.section_title_overlay {
+  margin: 30px 0;
+  margin-left: -300px;
+  padding: 5px 0;
+  background: linear-gradient(to right, rgba(17, 28, 73, 0) 0%, #111c49 27%, #111c49 100%);
+  transform: skewX(-20deg); }
+
 .btn_main {
   display: inline-flex;
   padding: 22px 45px;
@@ -83,8 +122,10 @@ ul {
   text-decoration: none;
   border-radius: 12px;
   background: linear-gradient(to top, #fad61f 0%, #fb9d31 7%, #fafa03 93%, #fad221 100%);
-  box-shadow: 0px 8px 0px -3px #7c4304;
-  transition: all 0.5s ease-out; }
+  box-shadow: 0px 8px 0px -3px #7c4304; }
+  @media (max-width: 575px) {
+    .btn_main {
+      padding: 22px 17px; } }
   .btn_main:hover, .btn_main:focus, .btn_main:active, .btn_main:visited {
     text-decoration: none; }
   .btn_main:hover {
@@ -105,15 +146,16 @@ ul {
 
 header {
   padding-top: 5px;
+  padding-bottom: 20px;
   background-image: url("../img/backgrounds/header_bg.png");
   background-size: cover;
-  background-position: 13% center; }
+  background-position: 50% center; }
   @media (max-width: 991px) {
     header {
-      background-position: 42% center; } }
+      background-position: 48% center; } }
   @media (max-width: 575px) {
     header {
-      background-position: 67% center; } }
+      background-position: 72% center; } }
 
 .header_top_text {
   font-size: 30px;
@@ -163,6 +205,9 @@ header {
 
 .header_medal {
   margin: 15px; }
+  @media (max-width: 767px) {
+    .header_medal {
+      max-width: 80px; } }
   @media (max-width: 575px) {
     .header_medal {
       margin: 5px;
@@ -176,6 +221,9 @@ header {
   .header_bottles_container .two_bottles {
     position: relative;
     margin-top: 75px; }
+    @media (max-width: 991px) {
+      .header_bottles_container .two_bottles {
+        margin-top: 50px; } }
     @media (max-width: 575px) {
       .header_bottles_container .two_bottles {
         width: 180px;
@@ -186,8 +234,8 @@ header {
     left: -30px; }
     @media (max-width: 991px) {
       .header_bottles_container .molekul {
-        top: 255px;
-        left: 225px;
+        top: 222px;
+        left: 210px;
         width: 140px; } }
     @media (max-width: 575px) {
       .header_bottles_container .molekul {
@@ -200,8 +248,8 @@ header {
     left: 75px; }
     @media (max-width: 991px) {
       .header_bottles_container .percent_50_medal {
-        top: 60px;
-        left: 230px; } }
+        top: 25px;
+        left: 222px; } }
     @media (max-width: 575px) {
       .header_bottles_container .percent_50_medal {
         top: 0px;
@@ -211,7 +259,13 @@ header {
 .header_points {
   text-transform: uppercase;
   max-width: 365px;
-  margin-bottom: 45px; }
+  margin-top: 120px; }
+  @media (max-width: 991px) {
+    .header_points {
+      margin-top: 185px; } }
+  @media (max-width: 767px) {
+    .header_points {
+      margin-top: 5px; } }
   @media (max-width: 575px) {
     .header_points {
       margin-left: 0; } }
@@ -222,7 +276,7 @@ header {
       margin: 0 10px;
       transform: skewX(20deg); }
     .header_points .header_point p {
-      font: 700 15px "Roboto", sans-serif;
+      font: 500 15px "Roboto", sans-serif;
       transform: skewX(20deg); }
       @media (max-width: 575px) {
         .header_points .header_point p {
@@ -249,3 +303,68 @@ header {
     background-color: rgba(19, 32, 84, 0.8); }
   .skewed_bullet:first-child::before {
     right: -21px; }
+
+.header_arrow_and_button {
+  margin-top: -80px; }
+  @media (max-width: 991px) {
+    .header_arrow_and_button {
+      margin-top: 0; } }
+  .header_arrow_and_button .arrow_text {
+    margin-left: 300px; }
+    @media (max-width: 991px) {
+      .header_arrow_and_button .arrow_text {
+        margin-left: 0; } }
+    @media (max-width: 767px) {
+      .header_arrow_and_button .arrow_text {
+        margin-bottom: 30px; } }
+
+.tv_logos {
+  margin-top: 30px; }
+  .tv_logos p {
+    display: inline-block;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-right: 15px; }
+    @media (max-width: 575px) {
+      .tv_logos p {
+        font-size: 12px; } }
+  .tv_logos img {
+    margin: 5px 28px 5px 0; }
+    @media (max-width: 991px) {
+      .tv_logos img {
+        margin-right: 10px;
+        max-width: 100px; } }
+    @media (max-width: 575px) {
+      .tv_logos img {
+        max-width: 57px; } }
+
+section.for_those {
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 80%, rgba(0, 0, 0, 0.35) 100%), url("../img/backgrounds/for_those_bg.png");
+  background-size: cover; }
+  section.for_those .section_title {
+    max-width: 900px; }
+  section.for_those p span.green {
+    display: block;
+    font: 900 40px "Roboto", sans-serif;
+    letter-spacing: 3.5px;
+    text-align: center; }
+    @media (max-width: 767px) {
+      section.for_those p span.green {
+        font-size: 24px;
+        letter-spacing: 2px; } }
+  section.for_those .three_bottles_and_text {
+    margin-bottom: 10px; }
+  section.for_those .man_with_barbell {
+    max-width: 634px;
+    margin-left: -70px;
+    margin-top: -38px; }
+    @media (max-width: 991px) {
+      section.for_those .man_with_barbell {
+        max-width: 540px;
+        margin-left: -133px;
+        margin-top: 36px; } }
+    @media (max-width: 767px) {
+      section.for_those .man_with_barbell {
+        max-width: 100%;
+        margin-left: 6%;
+        margin-top: 10px; } }

@@ -16,10 +16,20 @@
 
 // ------------------------------------ General styles ------------------------------------
 
-// Body styles
+// All elements
+*
+  transition: $main_trans_prop
+
+// Common styles
 body
   font: 300 24px $font-stack
   color: $white
+  overflow-x: hidden
+section
+  padding-top: 10px
+  overflow-x: hidden
+  p
+    margin-bottom: 30px
 
 // Typo styles
 h1
@@ -32,25 +42,33 @@ h1
   // background: $silver_white_webkit_gradient
   // -webkit-background-clip: text
   // -webkit-text-fill-color: transparent
-  text-shadow: 0 2px 2px #83cf66, 2px 0 2px #83cf66, -2px 0 2px #83cf66, 0 -2px 2px #83cf66, 2px 2px 2px #83cf66, -2px 2px 2px #83cf66, 2px -2px 2px #83cf66, -2px -2px 2px #83cf66
+  text-shadow: $h1_shadow
   @media (max-width: $md_screen)
     font-size: 60px
   @media (max-width: $sm_screen)
     font-size: 36px
 h2.section_title
   font: 900 40px $font-stack
+  text-transform: uppercase
+  text-align: center
   margin: 0
+  margin-left: 300px
+  transform: skewX(20deg)
   @media (max-width: $md_screen)
     font-size: 30px
   @media (max-width: $sm_screen)
     font-size: 24px
 p
-  font: 400 18px $font-stack
+  font: 300 18px $font-stack
   margin: 0
-p.bold
+  text-align: justify
+p.bold, span.bold
   font-weight: 900
-p.highlight
+  text-transform: uppercase
+p.highlight, span.highlight
   color: $accent_color_1
+p.green, span.green
+  color: $accent_color_2
 p.warning
   font: 400 13px $font-stack
   display: inline-block
@@ -60,6 +78,18 @@ p.warning
     color: $warning_color
   @media (max-width: $sm_screen)
     font-size: 12px
+.arrow_text
+  .arrow_title
+    font: 900 24px $font-stack
+    text-transform: uppercase
+    color: $accent_color_1
+    text-shadow: $arrow_title_shadow
+  .arrow_subtitle
+    font-weight: 700
+  .arrow_default
+    font-weight: 900
+    text-transform: uppercase
+
 ul
   list-style-type: none
   padding: 0
@@ -75,6 +105,12 @@ ul
   box-shadow: $warning_overlay_shadow
   img
     margin-right: 15px
+.section_title_overlay
+  margin: 30px 0
+  margin-left: -300px
+  padding: 5px 0
+  background: $section_title_overlay_gradient
+  transform: skewX(-20deg)
 
 // Buttons
 .btn_main
@@ -88,10 +124,13 @@ ul
   box-shadow: $btn_main_shadow
   // XXX: I cant use inset box-shadow with gradient!
   // box-shadow: inset 0px 0px 0px 2px $btn_main_border_gradient
-  transition: $main_trans_prop
+  // transition: $main_trans_prop
+  @media (max-width: $sm_screen)
+    padding: 22px 17px
   &:hover, &:focus, &:active, &:visited
     text-decoration: none
   &:hover
+    // BUG: Floating elements because of flex-box
     margin-top: 3px
     margin-bottom: 0
     background: $btn_main_hovered_bg_gradient
@@ -114,13 +153,14 @@ ul
 // Header
 header
   padding-top: 5px
+  padding-bottom: 20px
   background-image: url("../img/backgrounds/header_bg.png")
   background-size: cover
-  background-position: 13% center
+  background-position: 50% center
   @media (max-width: $md_screen)
-    background-position: 42% center
+    background-position: 48% center
   @media (max-width: $sm_screen)
-    background-position: 67% center
+    background-position: 72% center
 .header_top_text
   font-size: 30px
   text-transform: uppercase
@@ -159,6 +199,8 @@ header
     margin-top: 15px
 .header_medal
   margin: 15px
+  @media (max-width: $md-sm_screen)
+    max-width: 80px
   @media (max-width: $sm_screen)
     margin: 5px
     max-width: 55px
@@ -170,6 +212,8 @@ header
     // position: absolute
     position: relative
     margin-top: 75px
+    @media (max-width: $md_screen)
+      margin-top: 50px
     @media (max-width: $sm_screen)
       width: 180px
       margin-top: 15px
@@ -178,8 +222,8 @@ header
     top: 225px
     left: -30px
     @media (max-width: $md_screen)
-      top: 255px
-      left: 225px
+      top: 222px
+      left: 210px
       width: 140px
     @media (max-width: $sm_screen)
       top: 125px
@@ -190,8 +234,8 @@ header
     top: 10px
     left: 75px
     @media (max-width: $md_screen)
-      top: 60px
-      left: 230px
+      top: 25px
+      left: 222px
     @media (max-width: $sm_screen)
       top: 0px
       left: 135px
@@ -199,7 +243,11 @@ header
 .header_points
   text-transform: uppercase
   max-width: 365px
-  margin-bottom: 45px
+  margin-top: 120px
+  @media (max-width: $md_screen)
+    margin-top: 185px
+  @media (max-width: $md-sm_screen)
+    margin-top: 5px
   @media (max-width: $sm_screen)
     margin-left: 0
   .header_point
@@ -209,7 +257,7 @@ header
       margin: 0 10px
       transform: skewX(20deg)
     p
-      font: 700 15px $font-stack
+      font: 500 15px $font-stack
       transform: skewX(20deg)
       @media (max-width: $sm_screen)
         font-size: 13px
@@ -235,3 +283,59 @@ header
   &:first-child
     &::before
       right: -21px
+.header_arrow_and_button
+  margin-top: -80px
+  @media (max-width: $md_screen)
+    margin-top: 0
+  .arrow_text
+    margin-left: 300px
+    @media (max-width: $md_screen)
+      margin-left: 0
+    @media (max-width: $md-sm_screen)
+      margin-bottom: 30px
+.tv_logos
+  margin-top: 30px
+  p
+    display: inline-block
+    font-size: 17px
+    text-transform: uppercase
+    margin-right: 15px
+    @media (max-width: $sm_screen)
+      font-size: 12px
+  img
+    margin: 5px 28px 5px 0
+    @media (max-width: $md_screen)
+      margin-right: 10px
+      max-width: 100px
+    @media (max-width: $sm_screen)
+      max-width: 57px
+
+// "For those" section
+section.for_those
+  background-image: $section_bottom_gradient, url("../img/backgrounds/for_those_bg.png")
+  background-size: cover
+  .section_title
+    max-width: 900px
+  p
+    span.green
+      display: block
+      font: 900 40px $font-stack
+      letter-spacing: 3.5px
+      text-align: center
+      @media (max-width: $md-sm_screen)
+        font-size: 24px
+        letter-spacing: 2px
+  .three_bottles_and_text
+    margin-bottom: 10px
+  .man_with_barbell
+    max-width: 634px
+    margin-left: -70px
+    margin-top: -38px
+    @media (max-width: $md_screen)
+      max-width: 540px
+      margin-left: -133px
+      margin-top: 36px
+    @media (max-width: $md-sm_screen)
+      max-width: 100%
+      margin-left: 6%
+      margin-top: 10px

@@ -126,10 +126,10 @@ gulp.task('build', ['clean', 'scripts', 'minCss', 'minCssLibs'], function() {
     ])
     .pipe(gulp.dest('dist/js'));
 
-  var buildFonts = gulp.src([
-      'src/fonts/**/*.*'
-    ])
-    .pipe(gulp.dest('dist/fonts'));
+  // var buildFonts = gulp.src([
+  //     'src/fonts/**/*.*'
+  //   ])
+  //   .pipe(gulp.dest('dist/fonts'));
 
   var buildHtmlPhp = gulp.src([
       'src/*.html',
