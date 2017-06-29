@@ -446,3 +446,90 @@ section.complex {
       @media (max-width: 767px) {
         section.complex .complex_column p {
           margin-bottom: 10px; } }
+
+section.effects_and_benefits {
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 80%, rgba(0, 0, 0, 0.35) 100%), url("../img/backgrounds/effects_and_benefits_bg.png");
+  background-size: cover; }
+  section.effects_and_benefits .effects_and_benefits_point_text {
+    transform: skewX(20deg); }
+    section.effects_and_benefits .effects_and_benefits_point_text p {
+      margin: 0; }
+      @media (max-width: 575px) {
+        section.effects_and_benefits .effects_and_benefits_point_text p {
+          font-size: 14px; } }
+  section.effects_and_benefits ul {
+    margin-bottom: 50px; }
+    section.effects_and_benefits ul li {
+      padding: 12px 8px 12px 25px;
+      background-color: #83cf66;
+      transform: skewX(-20deg); }
+      @media (max-width: 991px) {
+        section.effects_and_benefits ul li:nth-child(1) {
+          max-width: 92%; }
+          section.effects_and_benefits ul li:nth-child(1)::after {
+            right: -40px;
+            width: 41px; }
+          section.effects_and_benefits ul li:nth-child(1)::before {
+            right: -23px;
+            width: 40px; } }
+      @media (max-width: 991px) {
+        section.effects_and_benefits ul li:nth-child(2)::after {
+          right: -34px;
+          width: 43px; }
+        section.effects_and_benefits ul li:nth-child(2)::before {
+          right: -21px;
+          width: 42px; } }
+      @media (max-width: 991px) {
+        section.effects_and_benefits ul li:nth-child(3) {
+          max-width: 92%; } }
+      @media (max-width: 991px) {
+        section.effects_and_benefits ul li:nth-child(4) {
+          max-width: 98%; }
+          section.effects_and_benefits ul li:nth-child(4)::after {
+            right: -40px;
+            width: 41px; }
+          section.effects_and_benefits ul li:nth-child(4)::before {
+            right: -23px;
+            width: 40px; } }
+      @media (max-width: 991px) {
+        section.effects_and_benefits ul li:nth-child(5) {
+          max-width: 92%; } }
+      @media (max-width: 991px) {
+        section.effects_and_benefits ul li:nth-child(6)::after {
+          right: -35px;
+          width: 44px; }
+        section.effects_and_benefits ul li:nth-child(6)::before {
+          right: -22px;
+          width: 43px; } }
+      section.effects_and_benefits ul li::after {
+        content: "";
+        position: absolute;
+        right: -29px;
+        bottom: 0;
+        width: 30px;
+        height: 50%;
+        background-color: #83cf66; }
+      section.effects_and_benefits ul li::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -16px;
+        transform: skewX(37deg);
+        width: 30px;
+        height: 50%;
+        background-color: #83cf66; }
+      @media (max-width: 575px) {
+        section.effects_and_benefits ul li {
+          margin-left: -30px;
+          max-width: 100% !important; } }
+      section.effects_and_benefits ul li img {
+        margin-right: 15px;
+        transform: skewX(20deg); }
+      section.effects_and_benefits ul li .effects_and_benefits_point_title {
+        color: #132054; }
+  section.effects_and_benefits .effects_and_benefits_img_container {
+    max-width: 188px;
+    z-index: 2; }
+    section.effects_and_benefits .effects_and_benefits_img_container img {
+      margin-left: -110px;
+      margin-bottom: -50px; }

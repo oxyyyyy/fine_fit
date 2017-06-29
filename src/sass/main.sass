@@ -411,3 +411,91 @@ section.complex
         line-height: 22px
       @media (max-width: $md-sm_screen)
         margin-bottom: 10px
+
+// "Effects and benefits" section
+section.effects_and_benefits
+  background-image: $section_bottom_gradient, url("../img/backgrounds/effects_and_benefits_bg.png")
+  background-size: cover
+  .effects_and_benefits_point_text
+    transform: skewX(20deg)
+    p
+      margin: 0
+      @media (max-width: $sm_screen)
+        font-size: 14px
+  ul
+    margin-bottom: 50px
+    li
+      padding: 12px 8px 12px 25px
+      background-color: $accent_color_2
+      transform: skewX(-20deg)
+      &:nth-child(1)
+        @media (max-width: $md_screen)
+          max-width: 92%
+          &::after
+            right: -40px
+            width: 41px
+          &::before
+            right: -23px
+            width: 40px
+      &:nth-child(2)
+        @media (max-width: $md_screen)
+          &::after
+            right: -34px
+            width: 43px
+          &::before
+            right: -21px
+            width: 42px
+      &:nth-child(3)
+        @media (max-width: $md_screen)
+          max-width: 92%
+      &:nth-child(4)
+        @media (max-width: $md_screen)
+          max-width: 98%
+          &::after
+            right: -40px
+            width: 41px
+          &::before
+            right: -23px
+            width: 40px
+      &:nth-child(5)
+        @media (max-width: $md_screen)
+          max-width: 92%
+      &:nth-child(6)
+        @media (max-width: $md_screen)
+          &::after
+            right: -35px
+            width: 44px
+          &::before
+            right: -22px
+            width: 43px
+      &::after
+        content: ""
+        position: absolute
+        right: -29px
+        bottom: 0
+        width: 30px
+        height: 50%
+        background-color: $accent_color_2
+      &::before
+        content: ""
+        position: absolute
+        top: 0
+        right: -16px
+        transform: skewX(37deg)
+        width: 30px
+        height: 50%
+        background-color: $accent_color_2
+      @media (max-width: $sm_screen)
+        margin-left: -30px
+        max-width: 100% !important
+      img
+        margin-right: 15px
+        transform: skewX(20deg)
+      .effects_and_benefits_point_title
+        color: $accent_color_3
+  .effects_and_benefits_img_container
+    max-width: 188px
+    z-index: 2
+    img
+      margin-left: -110px
+      margin-bottom: -50px
