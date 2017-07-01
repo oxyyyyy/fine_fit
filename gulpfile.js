@@ -35,8 +35,8 @@ gulp.task('scripts', function() {
   return gulp.src([
       'src/libs/**/*.js',
       'bower_components/jquery/dist/jquery.min.js',
-      'bower_components/bootstrap/dist/js/bootstrap.min.js',
-      'bower_components/tether/dist/js/tether.min.js'
+      'bower_components/tether/dist/js/tether.min.js',
+      'bower_components/bootstrap/dist/js/bootstrap.min.js'
     ])
     .pipe(concat('bundle.libs.min.js'))
     .pipe(uglify())
