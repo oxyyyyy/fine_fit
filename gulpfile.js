@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
   sass = require('gulp-sass'),
   browserSync = require('browser-sync').create(),
+  gutil = require('gulp-util'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglifyjs'),
   cssnano = require('gulp-cssnano'),
@@ -25,9 +26,17 @@ gulp.task('browser-sync', function () {
   });
 });
 
-gulp.task('sass', function () {
+gulp.task('sass', function() {
   return gulp.src('src/sass/**/*.sass')
-    .pipe(sass())
+    .pipe(sass().on('error', function(err) {
+      const message = err.message || '';
+      const errName = err.name || '';
+      const codeFrame = err.codeFrame || '';
+      gutil.log(gutil.colors.red.bold('[JS babel error]')+' '+ gutil.colors.bgRed(errName));
+      gutil.log(gutil.colors.bold('message:') +' '+ message);
+      gutil.log(gutil.colors.bold('codeframe:') + '\n' + codeFrame);
+      this.emit('end');
+     }))
     .pipe(gulp.dest('src/css'));
 });
 

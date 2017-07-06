@@ -26,6 +26,7 @@
     "gulp-imagemin": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-uglifyjs": "^0.6.2"
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-util": "^3.0.8"
   }
 }
