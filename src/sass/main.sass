@@ -30,6 +30,9 @@ section
   overflow-y: hidden
   p
     margin-bottom: 30px
+header, section
+  background-size: cover
+  background-position: center center
 
 // Typo styles
 h1
@@ -188,8 +191,6 @@ header
   padding-top: 5px
   padding-bottom: 20px
   background-image: url("../img/backgrounds/header_bg.png")
-  background-size: cover
-  background-position: 50% center
   @media (max-width: $md_screen)
     background-position: 48% center
   @media (max-width: $sm_screen)
@@ -346,7 +347,6 @@ header
 // "For those" section
 section.for_those
   background-image: $section_bottom_gradient, url("../img/backgrounds/for_those_bg.png")
-  background-size: cover
   .section_title
     max-width: 900px
   p
@@ -376,7 +376,6 @@ section.for_those
 // "Complex" section
 section.complex
   background-image: $section_bottom_gradient, url("../img/backgrounds/complex_bg.png")
-  background-size: cover
   .section_title_overlay
     @media (max-width: $md-sm_screen)
       padding-bottom: 50px
@@ -415,7 +414,6 @@ section.complex
 // "Effects and benefits" section
 section.effects_and_benefits
   background-image: $section_bottom_gradient, url("../img/backgrounds/effects_and_benefits_bg.png")
-  background-size: cover
   .effects_and_benefits_point_text
     transform: skewX(20deg)
     p
@@ -499,3 +497,37 @@ section.effects_and_benefits
     img
       margin-left: -110px
       margin-bottom: -50px
+
+// "Perfect if" section
+section.perfect_if
+  background-image: url("../img/backgrounds/perfect_if_bg.png")
+.perfect_if_big_card, .perfect_if_small_card
+  border: 4px solid $accent_color_2
+  width: 30%
+  padding: 22px
+  margin-top: 0
+  @media (max-width: $md_screen)
+    padding: 10px
+  p
+    margin: 0
+    text-align: left
+    @media (max-width: $md_screen)
+      font-size: 16px
+.perfect_if_big_card
+  width: 25%
+  height: 380px
+  margin: 5px
+.perfect_if_small_card
+  height: 180px
+  &:nth-child(1), &:nth-child(2), &:nth-child(3)
+    margin-bottom: 20px
+  img
+    @media (max-width: $md_screen)
+      margin: 5px
+.perfect_if_cards_container
+  margin-bottom: 30px
+.perfect_if_small_cards_container
+  margin: 5px
+
+// "Way" section
+section.way
