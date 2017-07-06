@@ -45,7 +45,8 @@ gulp.task('scripts', function () {
     'src/libs/**/*.js',
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/tether/dist/js/tether.min.js',
-    'bower_components/bootstrap/dist/js/bootstrap.min.js'
+    'bower_components/bootstrap/dist/js/bootstrap.min.js',
+    'src/js/libs/jquery.bxslider.min.js'
   ])
     .pipe(concat('bundle.libs.min.js'))
     .pipe(uglify())
@@ -55,7 +56,8 @@ gulp.task('scripts', function () {
 gulp.task('concatCssTaskLibs', function () {
   return gulp.src([
     'bower_components/bootstrap/dist/css/bootstrap.min.css',
-    'bower_components/tether/dist/css/tether.min.css'
+    'bower_components/tether/dist/css/tether.min.css',
+    'src/css/libs/jquery.bxslider.min.css'
   ])
     .pipe(concatCss('bundle.libs.css'))
     .pipe(gulp.dest('src/css'));

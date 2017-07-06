@@ -15,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.6",
-    "glidejs": "^2.1.0"
+    "bootstrap": "v4.0.0-alpha.6"
   }
 }
