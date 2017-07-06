@@ -26,7 +26,12 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
+
+# Bower
 bower_components
+
+# VS Code
+.vscode/*
 
 # Optional npm cache directory
 .npm
