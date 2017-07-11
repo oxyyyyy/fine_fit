@@ -1,0 +1,9 @@
+{
+	"title" : "Fine Fit",
+	"description": "Description",
+	"footer-menu": {
+		"item": {
+			"text": "Главная"
+		}
+	}
+}

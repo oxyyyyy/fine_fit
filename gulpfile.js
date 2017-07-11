@@ -8,10 +8,13 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   concatCss = require('gulp-concat-css'),
   imagemin = require('gulp-imagemin'),
+  data = require('gulp-data'),
+  fs = require("fs"),
+  jade = require('gulp-jade'),
   del = require('del');
 
 // NOTE: NPM Musthave!
-// npm i gulp gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-cssnano gulp-rename gulp-concat-css gulp-imagemin del --save-dev
+// npm i gulp gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-cssnano gulp-rename gulp-concat-css gulp-imagemin gulp-data gulp-jade fs del --save-dev
 // NOTE: Bower Musthave!
 // bower init
 
@@ -26,17 +29,30 @@ gulp.task('browser-sync', function () {
   });
 });
 
-gulp.task('sass', function() {
+gulp.task('jade', function () {
+  return gulp.src('src/jade/*.jade')
+    .pipe(data(function (file) {
+      return JSON.parse(
+        fs.readFileSync('src/lang/ru.json')
+      );
+    }))
+    .pipe(jade({
+      pretty: true
+    }))
+    .pipe(gulp.dest('src'));
+});
+
+gulp.task('sass', function () {
   return gulp.src('src/sass/**/*.sass')
-    .pipe(sass().on('error', function(err) {
+    .pipe(sass().on('error', function (err) {
       const message = err.message || '';
       const errName = err.name || '';
       const codeFrame = err.codeFrame || '';
-      gutil.log(gutil.colors.red.bold('[JS babel error]')+' '+ gutil.colors.bgRed(errName));
-      gutil.log(gutil.colors.bold('message:') +' '+ message);
+      gutil.log(gutil.colors.red.bold('[JS babel error]') + ' ' + gutil.colors.bgRed(errName));
+      gutil.log(gutil.colors.bold('message:') + ' ' + message);
       gutil.log(gutil.colors.bold('codeframe:') + '\n' + codeFrame);
       this.emit('end');
-     }))
+    }))
     .pipe(gulp.dest('src/css'));
 });
 
@@ -88,7 +104,8 @@ gulp.task('clean', function () {
 // -----------------------------------------------------------------------------------------------------------
 
 // Watch! ----------------------------------------------------------------------------------------------------
-gulp.task('default', ['browser-sync', 'minCss', 'minCssLibs', 'scripts'], function () {
+gulp.task('default', ['browser-sync', 'jade', 'minCss', 'minCssLibs', 'scripts'], function () {
+  gulp.watch('src/jade/**/*.jade', ['jade'], browserSync.reload);
   gulp.watch('src/sass/**/*.sass', ['minCss']);
   gulp.watch('src/*.html', browserSync.reload);
   gulp.watch('src/js/**/*.js', browserSync.reload);
