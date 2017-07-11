@@ -95,7 +95,30 @@ p.warning
     color: $warning_color
   @media (max-width: $sm_screen)
     font-size: 12px
+.header_arrow_and_button_relative
+  width: 620px
+  position: relative
+  left: -45px
+  z-index: 1
+  &:after
+    content: ''
+    position: absolute
+    right: -62px
+    top: 0px
+    border: 42px solid transparent
+    border-left: 20px solid $accent_color_2
+.header_arrow_and_button
+  overflow: hidden
+  padding-left: 20px
+.header_arrow_and_button_skew
+  background: $accent_color_2
+  width: 640px
+  transform: skewX(-20deg)
+  .btn_main
+    transform: skewX(20deg)
 .arrow_text
+  padding: 16px 0
+  transform: skewX(20deg)
   .arrow_title
     font: 900 24px $font-stack
     text-transform: uppercase
@@ -106,7 +129,7 @@ p.warning
   .arrow_default
     font-weight: 900
     text-transform: uppercase
-.header_arrow_and_button_small
+.arrow_and_button_small
   margin-bottom: 30px
   clear: both
   .arrow_text
@@ -196,6 +219,12 @@ header
     background-position: 48% center
   @media (max-width: $sm_screen)
     background-position: 72% center
+  .header_arrow_and_button_relative
+    @media (max-width: $md_screen)
+      width: 400px
+    .arrow_text
+      @media (max-width: $md_screen)
+        margin-left: 40px
 .header_top_text
   font-size: 30px
   text-transform: uppercase
@@ -241,6 +270,7 @@ header
     max-width: 55px
 .header_bottles_container
   position: relative
+  z-index: 10
   @media (max-width: $sm_screen)
     margin: 0 35px 0 auto
   .two_bottles
@@ -275,55 +305,58 @@ header
       top: 0px
       left: 135px
       width: 85px
-.header_points
-  text-transform: uppercase
-  max-width: 365px
-  margin-top: 120px
-  @media (max-width: $md_screen)
-    margin-top: 185px
-  @media (max-width: $md-sm_screen)
-    margin-top: 5px
+.header_point_relative_block
+  width: 345px
+  position: relative
   @media (max-width: $sm_screen)
-    margin-left: 0
-  .header_point
-    max-width: 89%
-    background-color: $header_point_bg
-    .check_mark
-      margin: 0 10px
-      transform: skewX(20deg)
-    p
-      font: 500 15px $font-stack
-      transform: skewX(20deg)
+    width: 285px
+  &:after
+    content: ''
+    position: absolute
+    right: -45px
+    top: 5px
+    border: 25px solid transparent
+    border-left: 20px solid $header_point_bg
+  &:nth-child(2), &:nth-child(3), &:nth-child(4)
+    &:after
+      right: -55px
+      border: 30px solid transparent
+      border-left: 25px solid $header_point_bg
       @media (max-width: $sm_screen)
-        font-size: 13px
-.skewed_bullet
+        right: -51px
+        border: 26px solid transparent
+        border-left: 25px solid $header_point_bg
+.header_point_block
+  overflow: hidden
+  padding-left: 14px
+.header_points
+  @media (max-width: $md_screen)
+    margin-top: 150px
+  @media (max-width: $md-sm_screen)
+    margin-top: 0
+.header_point
+  background: $header_point_bg
+  width: 365px
+  padding-left: 15px
+  padding-right: 50px
   transform: skewX(-20deg)
-  &::after
-    content: ""
-    position: absolute
-    right: -30px
-    bottom: 0
-    width: 30px
-    height: 50%
-    background-color: $header_point_bg
-  &::before
-    content: ""
-    position: absolute
-    top: 0
-    right: -19px
-    transform: skewX(37deg)
-    width: 30px
-    height: 50%
-    background-color: $header_point_bg
-  &:first-child
-    &::before
-      right: -21px
-.header_arrow_and_button
+  @media (max-width: $sm_screen)
+    width: 305px
+  p
+    font: 500 15px $font-stack
+    text-transform: uppercase
+    padding-left: 10px
+    transform: skewX(20deg)
+    @media (max-width: $sm_screen)
+      font-size: 11px
+  img
+    transform: skewX(20deg)
+.header_arrow_and_button_container
   margin-top: -80px
   @media (max-width: $md_screen)
     margin-top: 0
   .arrow_text
-    margin-left: 300px
+    margin-left: 320px
     @media (max-width: $md_screen)
       margin-left: 0
     @media (max-width: $md-sm_screen)
@@ -373,6 +406,20 @@ section.for_those
       max-width: 100%
       margin-left: 6%
       margin-top: 10px
+  .header_arrow_and_button_container
+    margin: 0
+    margin-bottom: 30px
+    .header_arrow_and_button_relative
+      &:after
+        right: -80px
+        top: -32px
+        border: 55px solid transparent
+        border-left: 36px solid #83cf66
+        transform: skewX(-10deg)
+    .arrow_text
+      margin-left: 50px
+    p
+      margin: 0
 
 // "Complex" section
 section.complex
@@ -396,7 +443,7 @@ section.complex
     p
       @media (max-width: $md-sm_screen)
         margin-bottom: 25px !important
-  .header_arrow_and_button_small
+  .arrow_and_button_small
     margin-top: -118px
     @media (max-width: $md-sm_screen)
       margin-top: 0
@@ -502,7 +549,7 @@ section.effects_and_benefits
 // "Perfect if" section
 section.perfect_if
   background-image: url("../img/backgrounds/perfect_if_bg.png")
-  .header_arrow_and_button_small
+  .arrow_and_button_small
     margin-top: 450px
     @media (max-width: $md-sm_screen)
       margin-top: 30px
@@ -541,6 +588,9 @@ section.perfect_if
   background-color: transparent
   border: none
   box-shadow: none
-
+.bx-pager-link
+  background: $white !important
+.active
+  background: $accent_color_2 !important
 // "Way" section
 section.way
