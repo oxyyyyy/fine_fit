@@ -16,13 +16,15 @@
 // ------------------------------------ General styles ------------------------------------
 
 // All elements
-*
-  transition: $main_trans_prop
+// *
+//   transition: $main_trans_prop
 
 // Common styles
 body
   font: 300 24px $font-stack
   color: $white
+  overflow-x: hidden
+.page_wrapper
   overflow-x: hidden
 section
   padding-top: 10px
@@ -79,14 +81,14 @@ p
   font: 300 18px $font-stack
   margin: 0
   text-align: justify
-p.bold, span.bold
+.bold, span.bold
   font-weight: 900
   text-transform: uppercase
-p.highlight, span.highlight
+.highlight, span.highlight
   color: $accent_color_1
-p.green, span.green
+.green, span.green
   color: $accent_color_2
-p.warning
+.warning
   font: 400 13px $font-stack
   display: inline-block
   span
@@ -114,11 +116,15 @@ p.warning
   background: $accent_color_2
   width: 640px
   transform: skewX(-20deg)
+  @media (max-width: $md-sm_screen)
+    transform: none
   .btn_main
     transform: skewX(20deg)
 .arrow_text
   padding: 16px 0
   transform: skewX(20deg)
+  @media (max-width: $md-sm_screen)
+    transform: none
   .arrow_title
     font: 900 24px $font-stack
     text-transform: uppercase
@@ -214,7 +220,7 @@ ul
 header
   padding-top: 5px
   padding-bottom: 20px
-  background-image: url("../img/backgrounds/header_bg.png")
+  background-image: $section_bottom_gradient, url("../img/backgrounds/header_bg.png")
   @media (max-width: $md_screen)
     background-position: 48% center
   @media (max-width: $sm_screen)
@@ -486,7 +492,7 @@ section.effects_and_benefits
       &:nth-child(2)
         @media (max-width: $md_screen)
           &::after
-            right: -34px
+            right: -42px
             width: 43px
           &::before
             right: -21px
@@ -509,7 +515,7 @@ section.effects_and_benefits
       &:nth-child(6)
         @media (max-width: $md_screen)
           &::after
-            right: -35px
+            right: -43px
             width: 44px
           &::before
             right: -22px
@@ -548,7 +554,7 @@ section.effects_and_benefits
 
 // "Perfect if" section
 section.perfect_if
-  background-image: url("../img/backgrounds/perfect_if_bg.png")
+  background-image: $section_bottom_gradient, url("../img/backgrounds/perfect_if_bg.png")
   .arrow_and_button_small
     margin-top: 450px
     @media (max-width: $md-sm_screen)
@@ -594,3 +600,47 @@ section.perfect_if
   background: $accent_color_2 !important
 // "Way" section
 section.way
+  background-image: $section_bottom_gradient, url("../img/backgrounds/way_bg.png")
+  background-position: 30%
+  @media (max-width: $md_screen)
+    background-position: 55%
+  @media (max-width: $md_screen)
+    background-position: 30%
+  ul
+    display: inline-block
+    max-width: 700px
+    @media (max-width: $md-sm_screen)
+      max-width: 100%
+    li
+      &:nth-child(even)
+        margin-left: 50px
+        @media (max-width: $md-sm_screen)
+          margin-left: 0
+      img
+        margin-right: 20px
+      p
+        margin: 0
+        @media (max-width: $md-sm_screen)
+          font-size: 16px
+        br
+          @media (max-width: $md_screen)
+            display: none
+  .way_glass_and_molekul
+    max-width: 220px
+    margin-top: 30px
+    @media (max-width: $md-sm_screen)
+      max-width: 30%
+// "Is" section
+section.is
+  background-image: $section_bottom_gradient, url("../img/backgrounds/is_bg.png")
+  .is_column_points_container
+    max-width: 30%
+    .is_point
+      text-align: center
+      margin-bottom: 25px
+      height: 150px
+      h3
+        font-size: 18px
+      p
+        font-size: 14px
+        text-align: center

@@ -14,12 +14,7 @@ html(lang='en')
     .page_wrapper
       header
         .container
-          .warning_overlay.d-flex.justify-content-center.align-items-center
-            img(src='img/icons/warning_icon.png', alt='')
-            p.warning
-              span WARNING!
-              |  Because of all the media attention our stores are struggling to keep the stocks up. As of
-              |             March 31 2017, we have a limited supply of products to ship within 24 hours.
+          include include/warning_message
           p.header_top_text.bold Increase the effectiveness of training at least 7 times!
           .header_title_container.d-flex.flex-column.flex-md-row.justify-content-between.align-items-center
             h1 Fine Fit :
@@ -219,6 +214,73 @@ html(lang='en')
               p easy purchase
       section.way
         .container
+          .section_title_overlay
+            h2.section_title Way to take Fine Fit
+          div.d-flex.flex-column.flex-md-row.justify-content-center.align-items-center
+            ul.way_list
+              li.way_list_point.d-flex.justify-content-start.align-items-center
+                img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_1.png')
+                p.bold Dilute <span class="green">1 teaspoon in a glass of water,</span> juice or <br>low-fat milk
+              li.way_list_point.d-flex.justify-content-start.align-items-center
+                img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_2.png')
+                p.bold <span class="green">Drink cocktail</span> in 40 min before training
+              li.way_list_point.d-flex.justify-content-start.align-items-center
+                img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_3.png')
+                p.bold <span class="green">Do workout</span> with increased efficiency and desire,<br> feel a powerful burst of energy
+              li.way_list_point.d-flex.justify-content-start.align-items-center
+                img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_4.png')
+                p.bold <span class="green">Do not exceed a dose</span> of more than 2 teaspoons<br> per day; <span class="green">do not use Fine Fit</span> at least 3 hours<br> before bedtime
+            img.way_glass_and_molekul(src='img/glass_and_molekul.png')
+          .d-flex.flex-wrap.justify-content-center.justify-content-md-between.align-items-center
+              .header_arrow_and_button_relative
+                .header_arrow_and_button
+                  .header_arrow_and_button_skew
+                    .arrow_text
+                      p.bold We rNormally Fine Fit effect comes <span class="highlight">in 10 min</span> after taking
+      section.is
+        .container
+          .section_title_overlay
+            h2.section_title Fine Fit is…
+          ul.is_points_container.d-flex.justify-content-around.align-items-center.bxslider
+            li.is_column_points_container
+              .is_point.d-flex.flex-column.justify-content-center.align-items-center
+                img.is_point_icon(src='img/icons/section_is/is_icon_1.png')
+                h3.is_point_title.bold.green Geranium Extract (DMAA)
+                p.is_point_text A powerful stimulant. 10 times stronger than caffeine and much softer. It improves mood and gives energy.
+              .is_point.d-flex.flex-column.justify-content-center.align-items-center
+                img.is_point_icon(src='img/icons/section_is/is_icon_2.png')
+                h3.is_point_title.bold.green Creatine monohydrate
+                p.is_point_text Improves the digestibility of substances, provides a synergistic effect.
+              .is_point.d-flex.flex-column.justify-content-center.align-items-center
+                img.is_point_icon(src='img/icons/section_is/is_icon_3.png')
+                h3.is_point_title.bold.green Arginine nitrate
+                p.is_point_text Activates "pumping", causes a powerful pumping effect of muscles.
+            li.is_column_points_container
+              .is_point.d-flex.flex-column.justify-content-center.align-items-center
+                img.is_point_icon(src='img/icons/section_is/is_icon_4.png')
+                h3.is_point_title.bold.green Schizandrol
+                p.is_point_text Improves physical vigor. Provides a strong stimulating effect.
+              .is_point.d-flex.flex-column.justify-content-center.align-items-center
+                img.is_point_icon(src='img/icons/section_is/is_icon_5.png')
+                h3.is_point_title.bold.green Yohimbe extract
+                p.is_point_text Stimulates the central nervous system, relieves fatigue, raises mood, increases libido.
+              .is_point.d-flex.flex-column.justify-content-center.align-items-center
+                img.is_point_icon(src='img/icons/section_is/is_icon_6.png')
+                h3.is_point_title.bold.green Sodium phosphate
+                p.is_point_text Increases endurance and adaptation to training loads.
+            li.is_column_points_container
+              .is_point.d-flex.flex-column.justify-content-center.align-items-center
+                img.is_point_icon(src='img/icons/section_is/is_icon_7.png')
+                h3.is_point_title.bold.green Schizandrol
+                p.is_point_text Improves physical vigor. Provides a strong stimulating effect.
+              .is_point.d-flex.flex-column.justify-content-center.align-items-center
+                img.is_point_icon(src='img/icons/section_is/is_icon_8.png')
+                h3.is_point_title.bold.green Yohimbe extract
+                p.is_point_text Stimulates the central nervous system, relieves fatigue, raises mood, increases libido.
+              .is_point.d-flex.flex-column.justify-content-center.align-items-center
+                img.is_point_icon(src='img/icons/section_is/is_icon_9.png')
+                h3.is_point_title.bold.green Sodium phosphate
+                p.is_point_text Increases endurance and adaptation to training loads.
     // Concatinated and minified scripts
     script(src='js/bundle.libs.min.js')
     script(src='js/common.js')
