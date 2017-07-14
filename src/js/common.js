@@ -9,3 +9,5 @@ if (md_sm_screen.matches) {
     $('.bxslider').bxSlider();
   });
 }
+
+// test
