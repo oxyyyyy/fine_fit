@@ -53,15 +53,7 @@ html(lang='en')
                   li.header_point.d-flex.align-items-center
                     img.check_mark(src='img/icons/check_mark.png', alt='')
                     p The most popular pre-training complex in the world
-          .header_arrow_and_button_container.d-flex.flex-wrap.justify-content-center.justify-content-md-between.align-items-center
-            .header_arrow_and_button_relative
-              .header_arrow_and_button
-                .header_arrow_and_button_skew
-                  .arrow_text
-                    p.arrow_title we keep performing!
-                    p.arrow_subtitle Over 39 000 satisfied customers!
-            a.btn_main(href='#')
-              p easy purchase
+          include include/section_arrow_and_button
           .tv_logos.d-flex.justify-content-between.align-items-center
             p as seen on tv:
             .tv_logos_container.d-flex-inline.flex-wrap.justify-content-between.align-items-center
@@ -132,14 +124,7 @@ html(lang='en')
                 |               stimulant. 10 times stronger and much softer than caffeine.
                 br
                 span.highlight It increases mood, gives energy.
-          .arrow_and_button_small.d-flex.flex-wrap.justify-content-center.justify-content-md-between.align-items-center
-            .arrow_text.d-flex.justify-content-center.align-items-end
-              img.two_bottles_and_molekul_small.hidden-md-down(src='img/two_bottles_and_molekul_small.png', alt='')
-              .arrow_title_and_subtitle_container
-                p.arrow_title we keep performing!
-                p.arrow_subtitle Over 39 000 satisfied customers!
-            a.btn_main(href='#')
-              p easy purchase
+          include include/section_arrow_and_button
       section.effects_and_benefits
         .container
           .section_title_overlay
@@ -204,14 +189,7 @@ html(lang='en')
             li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
               img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon7.png', alt='')
               p.bold Night disco lover
-          .arrow_and_button_small.d-flex.flex-wrap.justify-content-center.justify-content-md-between.align-items-center
-            .arrow_text.d-flex.justify-content-center.align-items-end
-              img.two_bottles_and_molekul_small.hidden-md-down(src='img/two_bottles_and_molekul_small.png', alt='')
-              .arrow_title_and_subtitle_container
-                p.arrow_title we keep performing!
-                p.arrow_subtitle Over 39 000 satisfied customers!
-            a.btn_main(href='#')
-              p easy purchase
+          include include/section_arrow_and_button
       section.way
         .container
           .section_title_overlay
@@ -281,6 +259,19 @@ html(lang='en')
                 img.is_point_icon(src='img/icons/section_is/is_icon_9.png')
                 h3.is_point_title.bold.green Sodium phosphate
                 p.is_point_text Increases endurance and adaptation to training loads.
+      section.doctor
+        .container
+          .section_title_overlay
+            h2.section_title Fine Fit is the most useful <br>pre-training complex
+          p.section_subtitle from all presented in the market
+          .d-flex.flex-column-reverse.flex-md-row.justify-content-center.align-items-center.align-items-md-start
+            img.doctor_doctor_img(src='img/doctor.png')
+            .doctor_text_container
+              p Scientists and physicians agree that the periodic stimulation of the body benefits. As in these moments the blood begins to circulate faster, as a result, the vessels are cleaned and "trained", dangerous deposits and cholesterol plaques are eliminated. Internal organs receive more nutrients and oxygen, as a consequence, they regenerate and recover faster. The body becomes more resistant to physical and emotional overload.
+              p Unlike many "synthetic analogues" Fine Fit does not have any side effects and is not addictive. This complex passed the necessary certification and was recognized not only harmless, but also useful for health.
+              p.bold.green Along with high efficiency, this made Fine Fit the most popular pre-training complex in the world.
+          include include/section_arrow_and_button
+
     // Concatinated and minified scripts
     script(src='js/bundle.libs.min.js')
     script(src='js/common.js')

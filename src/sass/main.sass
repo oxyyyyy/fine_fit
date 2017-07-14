@@ -77,6 +77,12 @@ h2.section_title
     @media (max-width: $md-sm_screen)
       font-size: 15px
       bottom: -45px
+p.section_subtitle
+  font: 700 18px $font-stack
+  text-align: center
+  color: $white
+  text-transform: uppercase
+  margin-top: -25px
 p
   font: 300 18px $font-stack
   margin: 0
@@ -118,6 +124,9 @@ p
   transform: skewX(-20deg)
   @media (max-width: $md-sm_screen)
     transform: none
+  .arrow_text
+    p
+      margin: 0
   .btn_main
     transform: skewX(20deg)
 .arrow_text
@@ -147,7 +156,70 @@ p
   .btn_main
     p
       font-size: 26px
-
+// section arrow and button
+.section_arrow_and_button_container
+  margin-bottom: 30px
+  z-index: 5
+.section_arrow_and_button
+  background: $base64_section_arrow_body
+  width: 575px
+  height: 81px
+  z-index: 5
+  @media (max-width: $md_screen)
+    width: 455px
+    margin-left: -120px
+  @media (max-width: $md-sm_screen)
+    justify-content: center !important
+    width: 95%
+    margin-bottom: 20px
+    margin-left: 0
+  @media (max-width: $sm_screen)
+    background: $base64_section_sm_arrow_body
+    width: 303px
+    height: 82px
+  &:before
+    content: $base64_section_arrow_start
+    width: 50px
+    height: 81px
+    position: relative
+    left: -66px
+    @media (max-width: $md_screen)
+      content: none
+  &:after
+    content: $base64_section_arrow_end
+    width: 50px
+    height: 81px
+    position: relative
+    right: -87px
+    @media (max-width: $md_screen)
+      right: -50px
+    @media (max-width: $md-sm_screen)
+      right: -150px
+    @media (max-width: $sm_screen)
+      content: none
+.section_arrow_two_bottles_and_molekul_small
+  margin: -40px 30px 0 -50px
+.section_arrow_text
+  display: inline-block
+  letter-spacing: 2px
+  margin-top: -6px
+  @media (max-width: $md_screen)
+    letter-spacing: 0
+    width: 286px
+  @media (max-width: $md-sm_screen)
+    width: 268px
+  .section_arrow_title
+    font: 900 24px $font-stack
+    text-transform: uppercase
+    color: $accent_color_1
+    text-shadow: $arrow_title_shadow
+    text-align: left
+    margin: 0
+  .section_arrow_subtitle
+    font-weight: 700
+    text-align: left
+    margin: 0
+// ---------------------
 ul
   list-style-type: none
   padding: 0
@@ -231,6 +303,34 @@ header
     .arrow_text
       @media (max-width: $md_screen)
         margin-left: 40px
+  .section_arrow_and_button_container
+    margin-top: -77px
+    @media (max-width: $md_screen)
+      margin-top: -10px
+    .section_arrow_and_button
+      width: 570px
+      @media (max-width: $md_screen)
+        width: 455px
+      @media (max-width: $sm_screen)
+        width: 303px
+      &:after
+        right: -33px
+        @media (max-width: $md_screen)
+          right: -50px
+        @media (max-width: $md-sm_screen)
+          right: -110px
+      img
+        display: none
+      .section_arrow_text
+        letter-spacing: 0
+        margin-left: 218px
+        width: 410px
+        position: relative
+        left: 25px
+        @media (max-width: $md_screen)
+          position: static
+          width: 286px
+          margin-left: 0
 .header_top_text
   font-size: 30px
   text-transform: uppercase
@@ -357,16 +457,16 @@ header
       font-size: 11px
   img
     transform: skewX(20deg)
-.header_arrow_and_button_container
-  margin-top: -80px
-  @media (max-width: $md_screen)
-    margin-top: 0
-  .arrow_text
-    margin-left: 320px
-    @media (max-width: $md_screen)
-      margin-left: 0
-    @media (max-width: $md-sm_screen)
-      margin-bottom: 30px
+// .header_arrow_and_button_container
+//   margin-top: -80px
+//   @media (max-width: $md_screen)
+//     margin-top: 0
+//   .arrow_text
+//     margin-left: 320px
+//     @media (max-width: $md_screen)
+//       margin-left: 0
+//     @media (max-width: $md-sm_screen)
+//       margin-bottom: 30px
 .tv_logos
   margin-top: 30px
   p
@@ -403,7 +503,7 @@ section.for_those
   .man_with_barbell
     max-width: 634px
     margin-left: -70px
-    margin-top: -38px
+    margin-top: -6px
     @media (max-width: $md_screen)
       max-width: 540px
       margin-left: -133px
@@ -449,8 +549,6 @@ section.complex
     p
       @media (max-width: $md-sm_screen)
         margin-bottom: 25px !important
-  .arrow_and_button_small
-    margin-top: -118px
     @media (max-width: $md-sm_screen)
       margin-top: 0
   .complex_column
@@ -464,6 +562,10 @@ section.complex
         line-height: 22px
       @media (max-width: $md-sm_screen)
         margin-bottom: 10px
+  .section_arrow_and_button_container
+    margin-top: -114px
+    @media (max-width: $md-sm_screen)
+      margin-top: 0
 
 // "Effects and benefits" section
 section.effects_and_benefits
@@ -555,7 +657,7 @@ section.effects_and_benefits
 // "Perfect if" section
 section.perfect_if
   background-image: $section_bottom_gradient, url("../img/backgrounds/perfect_if_bg.png")
-  .arrow_and_button_small
+  .section_arrow_and_button_container
     margin-top: 450px
     @media (max-width: $md-sm_screen)
       margin-top: 30px
@@ -639,8 +741,27 @@ section.is
       text-align: center
       margin-bottom: 25px
       height: 150px
+      .is_point_icon
+        margin-bottom: 15px
       h3
         font-size: 18px
       p
         font-size: 14px
         text-align: center
+section.doctor
+  background-image: $section_bottom_gradient, url("../img/backgrounds/doctor_bg.png")
+  .doctor_doctor_img
+    margin-top: -150px
+    margin-left: -120px
+    z-index: 1
+    @media (max-width: $md-sm_screen)
+      margin: 0
+      width: 60%
+    @media (max-width: $sm_screen)
+      width: 85%
+  .section_arrow_and_button_container
+    margin-top: -150px
+    @media (max-width: $md_screen)
+      margin-top: -30px
+    @media (max-width: $md-sm_screen)
+      margin-top: 0
