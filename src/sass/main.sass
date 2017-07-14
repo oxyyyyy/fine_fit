@@ -97,12 +97,16 @@ p
 .warning
   font: 400 13px $font-stack
   display: inline-block
+  @media (max-width: $sm_screen)
+    font-size: 12px
+    line-height: 12px
   span
     font: 500 18px $font-stack
     text-transform: uppercase
     color: $warning_color
-  @media (max-width: $sm_screen)
-    font-size: 12px
+    @media (max-width: $sm_screen)
+      font-size: 16px
+      line-height: 12px
 .header_arrow_and_button_relative
   width: 620px
   position: relative
@@ -233,6 +237,8 @@ ul
   background-color: $warning_bg_color
   padding: 15px 20px
   box-shadow: $warning_overlay_shadow
+  @media (max-width: $sm_screen)
+    padding: 10px
   img
     margin-right: 15px
 .section_title_overlay
@@ -318,7 +324,7 @@ header
         @media (max-width: $md_screen)
           right: -50px
         @media (max-width: $md-sm_screen)
-          right: -110px
+          right: -109px
       img
         display: none
       .section_arrow_text
