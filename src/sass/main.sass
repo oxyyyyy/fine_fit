@@ -706,6 +706,7 @@ section.perfect_if
   background: $white !important
 .active
   background: $accent_color_2 !important
+
 // "Way" section
 section.way
   background-image: $section_bottom_gradient, url("../img/backgrounds/way_bg.png")
@@ -738,6 +739,7 @@ section.way
     margin-top: 30px
     @media (max-width: $md-sm_screen)
       max-width: 30%
+
 // "Is" section
 section.is
   background-image: $section_bottom_gradient, url("../img/backgrounds/is_bg.png")
@@ -754,6 +756,8 @@ section.is
       p
         font-size: 14px
         text-align: center
+
+// "Doctor" section
 section.doctor
   background-image: $section_bottom_gradient, url("../img/backgrounds/doctor_bg.png")
   .doctor_doctor_img
@@ -771,3 +775,76 @@ section.doctor
       margin-top: -30px
     @media (max-width: $md-sm_screen)
       margin-top: 0
+
+// "Experts" section
+section.experts
+  background-image: $section_bottom_gradient, url("../img/backgrounds/experts_bg.png")
+  background-position: 48%
+  padding-bottom: 60px
+  @media (max-width: $md_screen)
+    background-position: 54%
+  @media (max-width: $md-sm_screen)
+    background-position: 25%
+    padding-bottom: 10px
+  .experts_text
+    background: $base64_experts_text_bg
+    background-size: contain
+    width: 602px
+    height: 440px
+    padding: 120px 190px 60px 36px
+    line-height: 32px
+    @media (max-width: $md_screen)
+      height: 360px
+      padding: 75px 135px 30px 30px
+      margin-top: 50px
+      line-height: 26px
+    @media (max-width: $md-sm_screen)
+      background: $base64_experts_text_sm_bg
+      background-size: cover
+      max-width: 313px
+      padding: 85px 25px 20px 20px
+      margin-top: 20px
+      font-size: 16px
+      line-height: 25px
+  .expert_photo_container
+    width: 305px
+    height: 480px
+    border: 4px solid $accent_color_2
+    overflow: hidden
+    transform: skewX(-16deg)
+    @media (max-width: $md-sm_screen)
+      width: 235px
+      height: 235px
+    .expert_photo
+      background: url("../img/expert.png")
+      width: 435px
+      height: 100%
+      position: relative
+      left: -70px
+      transform: skewX(16deg)
+      @media (max-width: $md_screen)
+        left: -80px
+      @media (max-width: $md-sm_screen)
+        left: -40px
+        background-size: 70%
+  .expert_desc
+    background: $expert_desc_bg_gradient
+    padding: 10px 100px
+    transform: skewX(-16deg)
+    position: absolute
+    right: 47px
+    bottom: 20px
+    @media (max-width: $md_screen)
+      padding: 10px 50px
+      right: 36px
+    @media (max-width: $md-sm_screen)
+      padding: 10px 20px
+      bottom: 430px
+      right: 95px
+    .expert_name
+      color: $accent_color_3
+      transform: skewX(16deg)
+    .expert_name, .expert_position
+      text-align: center
+      margin: 0
+      transform: skewX(16deg)
