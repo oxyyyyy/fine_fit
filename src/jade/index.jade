@@ -1,288 +1,360 @@
 doctype html
 html(lang='en')
-  head
-    // Required meta tags
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    meta(name='author', content='Alexandr Vlasenko')
-    // Title
-    title #{title}
-    // Concatinated and minified stylesheets
-    link(rel='stylesheet', href='css/bundle.libs.min.css')
-    link(rel='stylesheet', href='css/main.min.css')
-  body.index
-    .page_wrapper
-      header
-        .container
-          include include/warning_message
-          p.header_top_text.bold Increase the effectiveness of training at least 7 times!
-          .header_title_container.d-flex.flex-column.flex-md-row.justify-content-between.align-items-center
-            h1 Fine Fit :
-            p.header_after_title
-              | pre-training complex of a new generation 
-              br
-              |  with a high content of geranium extract
-          .header_bottles_and_points_container.d-flex.flex-column-reverse.flex-md-row.align-items-center.align-items-md-start
-            .d-flex.flex-row-reverse.flex-md-column
-              .header_medals_container.d-inline-flex.flex-column.flex-md-row.align-items-center
-                img.header_medal.img-fluid(src='img/medals/header_1_medal.png', alt='')
-                img.header_medal.img-fluid(src='img/medals/header_2_medal.png', alt='')
-                img.header_medal.img-fluid(src='img/medals/header_3_medal.png', alt='')
-              .header_bottles_container.d-inline-block
-                img.two_bottles(src='img/two_bottles.png', alt='')
-                img.molekul(src='img/molekul.png', alt='')
-                img.percent_50_medal(src='img/medals/50_percent_medal.png', alt='')
-            ul.header_points.d-inline-block
-              .header_point_relative_block
-                .header_point_block
-                  li.header_point.d-flex.align-items-center
-                    img.check_mark(src='img/icons/check_mark.png', alt='')
-                    p Raise Stamina and strength
-              .header_point_relative_block
-                .header_point_block
-                  li.header_point.d-flex.align-items-center
-                    img.check_mark(src='img/icons/check_mark.png', alt='')
-                    p Improves brain and physical activity by 300%
-              .header_point_relative_block
-                .header_point_block
-                  li.header_point.d-flex.align-items-center
-                    img.check_mark(src='img/icons/check_mark.png', alt='')
-                    p Effects rapid fat burning and muscle mass gain
-              .header_point_relative_block
-                .header_point_block
-                  li.header_point.d-flex.align-items-center
-                    img.check_mark(src='img/icons/check_mark.png', alt='')
-                    p The most popular pre-training complex in the world
-          include include/section_arrow_and_button
-          .tv_logos.d-flex.justify-content-between.align-items-center
-            p as seen on tv:
-            .tv_logos_container.d-flex-inline.flex-wrap.justify-content-between.align-items-center
-              img(src='img/tv_labels/1.png', alt='')
-              img(src='img/tv_labels/2.png', alt='')
-              img(src='img/tv_labels/3.png', alt='')
-              img.hidden-md-down(src='img/tv_labels/4.png', alt='')
-              img(src='img/tv_labels/5.png', alt='')
-              img(src='img/tv_labels/6.png', alt='')
-              img(src='img/tv_labels/7.png', alt='')
-      section.for_those
-        .container
-          .section_title_overlay
-            h2.section_title For those who do not want to be lazy and skip workouts
-          .row
-            .col-lg-7.col-md-9
-              p
-                | Each day we’re effected by many factors: work, stress, increasing fatigue, bad weather etc. Someday it’s hard
-                | to fight your will to stay at home and skip the training.
-              img.man_with_barbell.hidden-md-up(src='img/man_with_barbell.png', alt='')
-              .header_arrow_and_button_container.d-flex.flex-wrap.justify-content-center.justify-content-md-between.align-items-center
-                .header_arrow_and_button_relative
-                  .header_arrow_and_button
-                    .header_arrow_and_button_skew
-                      .arrow_text
-                        p.arrow_default
-                          | We represent you a new pre-training complex 
-                          span.highlight Fine Fit
-              p.bold
-                | - a special drink that activates the forces inside of you, eliminates laziness, lift ups mood and adds maximum
-                | energy.
-              .three_bottles_and_text.d-flex.justify-content-center.align-items-center
-                img.hidden-sm-down(src='img/three_bottles_and_molekul.png', alt='')
-                p
-                  | No matter how tired you may be, you will not only have the strength and desire for training, but its effectiveness
-                  | will increase 
-                  span.green at least 7 times
-            .col-lg-5.col-md-3
-              img.man_with_barbell.hidden-sm-down(src='img/man_with_barbell.png', alt='')
-      section.complex
-        .container
-          .section_title_overlay
-            h2.section_title
-              | Fine Fit is a completely natural complex,
-              br
-              span consisting exclusively of extracts of plants and vitamins
-          .d-flex.flex-column.flex-md-row.justify-content-between.align-items-start
-            .complex_column.left_complex_column
-              p
-                | Fine Fit has nothing to do with chemical energy drinks, which damage your health. It’s a completely natural drink
-                | with a strong stimulating effect. It makes workouts as intense and pleasant as possible.
-              p
-                | Fine Fit should be taken straight before training. Thanks to the special substances that make up the complex,
-                | it expands the blood vessels and enhances the blood flow, which results in active saturation of muscle tissue
-                | with nutrients and oxygen.
-            .complex_column.center_complex_column.hidden-sm-down.d-flex.justify-content-center
-              img(src='img/man_with_bottle.png', alt='')
-            .complex_column.right_complex_column
-              p
-                | All Fine Fit substances are in an easily digestible form, so that effect is nearly instantaneous.
-                br
-                | A person
-                |               feels a huge surge of energy and there’s no trace left from laziness and apathy.
-              p.bold
-                span.highlight Geranium Extract (DMAA) is the main element of Fine Fit consist.
-                br
-                | It’s a powerful
-                |               stimulant. 10 times stronger and much softer than caffeine.
-                br
-                span.highlight It increases mood, gives energy.
-          include include/section_arrow_and_button
-      section.effects_and_benefits
-        .container
-          .section_title_overlay
-            h2.section_title All effects and benefits of Fine Fit
-          .d-flex.justify-content-center.align-items-center
-            .effects_and_benefits_img_container
-              img.hidden-md-down(src='img/one_bottle_and_molekul.png', alt='')
-            ul.effects_and_benefits_points
-              li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
-                img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
-                .effects_and_benefits_point_text
-                  p.effects_and_benefits_point_title.bold Boosts the endurance, strength and productivity of the training.
-                  p.effects_and_benefits_point_desc You will do more and be tired less.
-              li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
-                img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
-                .effects_and_benefits_point_text
-                  p.effects_and_benefits_point_title.bold Accelerates the recovery process after exhausting loads.
-                  p.effects_and_benefits_point_desc Even after an active workout, you won’t feel drained nor tired.
-              li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
-                img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
-                .effects_and_benefits_point_text
-                  p.effects_and_benefits_point_title.bold Increases the speed of muscle mass gain.
-                  p.effects_and_benefits_point_desc Creates perfect conditions for muscle mass growth.
-              li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
-                img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
-                .effects_and_benefits_point_text
-                  p.effects_and_benefits_point_title.bold Accelerates metabolism, increases fat burning, suppresses appetite.
-                  p.effects_and_benefits_point_desc You can quickly lose those extra kilos.
-              li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
-                img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
-                .effects_and_benefits_point_text
-                  p.effects_and_benefits_point_title.bold Lifts up spirit, eliminates apathy.
-                  p.effects_and_benefits_point_desc You'll want to go to workout.
-              li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
-                img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
-                .effects_and_benefits_point_text
-                  p.effects_and_benefits_point_title.bold Raise mental capacity and improves the focus of consciousness.
-                  p.effects_and_benefits_point_desc If you are engaged in mental work, Fine Fit will increase its effectiveness.
-      section.perfect_if
-        .container
-          .section_title_overlay
-            h2.section_title Fine Fit is perfect for you, if you’re:
-          ul#perfect_if_bx_slider.perfect_if_cards_container
-            li.perfect_if_big_card.d-flex.flex-column.justify-content-between.align-items-start
-              img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon1.png', alt='')
-              p.bold Professional athlet
-            li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
-              img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon2.png', alt='')
-              p.bold Doing power trainings
-            li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
-              img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon3.png', alt='')
-              p.bold Doing intellectual
-            li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
-              img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon4.png', alt='')
-              p.bold Into active lifestylework
-            li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
-              img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon5.png', alt='')
-              p.bold Engaged in fitness
-            li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
-              img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon6.png', alt='')
-              p.bold Working much and often
-            li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
-              img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon7.png', alt='')
-              p.bold Night disco lover
-          include include/section_arrow_and_button
-      section.way
-        .container
-          .section_title_overlay
-            h2.section_title Way to take Fine Fit
-          div.d-flex.flex-column.flex-md-row.justify-content-center.align-items-center
-            ul.way_list
-              li.way_list_point.d-flex.justify-content-start.align-items-center
-                img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_1.png')
-                p.bold Dilute <span class="green">1 teaspoon in a glass of water,</span> juice or <br>low-fat milk
-              li.way_list_point.d-flex.justify-content-start.align-items-center
-                img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_2.png')
-                p.bold <span class="green">Drink cocktail</span> in 40 min before training
-              li.way_list_point.d-flex.justify-content-start.align-items-center
-                img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_3.png')
-                p.bold <span class="green">Do workout</span> with increased efficiency and desire,<br> feel a powerful burst of energy
-              li.way_list_point.d-flex.justify-content-start.align-items-center
-                img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_4.png')
-                p.bold <span class="green">Do not exceed a dose</span> of more than 2 teaspoons<br> per day; <span class="green">do not use Fine Fit</span> at least 3 hours<br> before bedtime
-            img.way_glass_and_molekul(src='img/glass_and_molekul.png')
-          .d-flex.flex-wrap.justify-content-center.justify-content-md-between.align-items-center
-              .header_arrow_and_button_relative
-                .header_arrow_and_button
-                  .header_arrow_and_button_skew
-                    .arrow_text
-                      p.bold We rNormally Fine Fit effect comes <span class="highlight">in 10 min</span> after taking
-      section.is
-        .container
-          .section_title_overlay
-            h2.section_title Fine Fit is…
-          ul#is_points_bx_slider.is_points_container.d-flex.justify-content-around.align-items-center
-            li.is_column_points_container
-              .is_point.d-flex.flex-column.justify-content-center.align-items-center
-                img.is_point_icon(src='img/icons/section_is/is_icon_1.png')
-                h3.is_point_title.bold.green Geranium Extract (DMAA)
-                p.is_point_text A powerful stimulant. 10 times stronger than caffeine and much softer. It improves mood and gives energy.
-              .is_point.d-flex.flex-column.justify-content-center.align-items-center
-                img.is_point_icon(src='img/icons/section_is/is_icon_2.png')
-                h3.is_point_title.bold.green Creatine monohydrate
-                p.is_point_text Improves the digestibility of substances, provides a synergistic effect.
-              .is_point.d-flex.flex-column.justify-content-center.align-items-center
-                img.is_point_icon(src='img/icons/section_is/is_icon_3.png')
-                h3.is_point_title.bold.green Arginine nitrate
-                p.is_point_text Activates "pumping", causes a powerful pumping effect of muscles.
-            li.is_column_points_container
-              .is_point.d-flex.flex-column.justify-content-center.align-items-center
-                img.is_point_icon(src='img/icons/section_is/is_icon_4.png')
-                h3.is_point_title.bold.green Schizandrol
-                p.is_point_text Improves physical vigor. Provides a strong stimulating effect.
-              .is_point.d-flex.flex-column.justify-content-center.align-items-center
-                img.is_point_icon(src='img/icons/section_is/is_icon_5.png')
-                h3.is_point_title.bold.green Yohimbe extract
-                p.is_point_text Stimulates the central nervous system, relieves fatigue, raises mood, increases libido.
-              .is_point.d-flex.flex-column.justify-content-center.align-items-center
-                img.is_point_icon(src='img/icons/section_is/is_icon_6.png')
-                h3.is_point_title.bold.green Sodium phosphate
-                p.is_point_text Increases endurance and adaptation to training loads.
-            li.is_column_points_container
-              .is_point.d-flex.flex-column.justify-content-center.align-items-center
-                img.is_point_icon(src='img/icons/section_is/is_icon_7.png')
-                h3.is_point_title.bold.green Schizandrol
-                p.is_point_text Improves physical vigor. Provides a strong stimulating effect.
-              .is_point.d-flex.flex-column.justify-content-center.align-items-center
-                img.is_point_icon(src='img/icons/section_is/is_icon_8.png')
-                h3.is_point_title.bold.green Yohimbe extract
-                p.is_point_text Stimulates the central nervous system, relieves fatigue, raises mood, increases libido.
-              .is_point.d-flex.flex-column.justify-content-center.align-items-center
-                img.is_point_icon(src='img/icons/section_is/is_icon_9.png')
-                h3.is_point_title.bold.green Sodium phosphate
-                p.is_point_text Increases endurance and adaptation to training loads.
-      section.doctor
-        .container
-          .section_title_overlay
-            h2.section_title Fine Fit is the most useful <br>pre-training complex
-          p.section_subtitle from all presented in the market
-          .d-flex.flex-column-reverse.flex-md-row.justify-content-center.align-items-center.align-items-md-start
-            img.doctor_doctor_img(src='img/doctor.png')
-            .doctor_text_container
-              p Scientists and physicians agree that the periodic stimulation of the body benefits. As in these moments the blood begins to circulate faster, as a result, the vessels are cleaned and "trained", dangerous deposits and cholesterol plaques are eliminated. Internal organs receive more nutrients and oxygen, as a consequence, they regenerate and recover faster. The body becomes more resistant to physical and emotional overload.
-              p Unlike many "synthetic analogues" Fine Fit does not have any side effects and is not addictive. This complex passed the necessary certification and was recognized not only harmless, but also useful for health.
-              p.bold.green Along with high efficiency, this made Fine Fit the most popular pre-training complex in the world.
-          include include/section_arrow_and_button
-      section.experts
-        .container
-          .section_title_overlay
-            h2.section_title Experts Know Better!
-          .d-flex.flex-column-reverse.flex-md-row.justify-content-center.align-items-center.align-items-md-start
-            p.experts_text I recommend Fine Fit to anyone who wants to achieve significant results in training. Of course, it won’t make you strong and slim just like that, but it will give you energy, desire, strength and increase your endurance, so that you can do more for training and exhaust less. Recently, I recommend Fine Fit to many of my students, and those who take Fine Fit achieve more.
-            .expert_photo_container
-              .expert_photo
-            .expert_desc
-              p.expert_name.bold Koren M.
-              p.expert_position professional fitness coach
+	head
+		// Required meta tags
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		meta(name='author', content='Alexandr Vlasenko')
+		// Title
+		title #{title}
+		// Concatinated and minified stylesheets
+		link(rel='stylesheet', href='css/bundle.libs.min.css')
+		link(rel='stylesheet', href='css/main.min.css')
+	body.index
+		.page_wrapper
+			header
+				.container
+					include include/warning_message
+					p.header_top_text.bold Increase the effectiveness of training at least 7 times!
+					.header_title_container.d-flex.flex-column.flex-md-row.justify-content-between.align-items-center
+						h1 Fine Fit :
+						p.header_after_title
+							| pre-training complex of a new generation 
+							br
+							|  with a high content of geranium extract
+					.header_bottles_and_points_container.d-flex.flex-column-reverse.flex-md-row.align-items-center.align-items-md-start
+						.d-flex.flex-row-reverse.flex-md-column
+							.header_medals_container.d-inline-flex.flex-column.flex-md-row.align-items-center
+								img.header_medal.img-fluid(src='img/medals/header_1_medal.png', alt='')
+								img.header_medal.img-fluid(src='img/medals/header_2_medal.png', alt='')
+								img.header_medal.img-fluid(src='img/medals/header_3_medal.png', alt='')
+							.header_bottles_container.d-inline-block
+								img.two_bottles(src='img/two_bottles.png', alt='')
+								img.molekul(src='img/molekul.png', alt='')
+								img.percent_50_medal(src='img/medals/50_percent_medal.png', alt='')
+						ul.header_points.d-inline-block
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p Raise Stamina and strength
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p Improves brain and physical activity by 300%
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p Effects rapid fat burning and muscle mass gain
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p The most popular pre-training complex in the world
+					include include/section_arrow_and_button
+					.tv_logos.d-flex.justify-content-between.align-items-center
+						p as seen on tv:
+						.tv_logos_container.d-flex-inline.flex-wrap.justify-content-between.align-items-center
+							img(src='img/tv_labels/1.png', alt='')
+							img(src='img/tv_labels/2.png', alt='')
+							img(src='img/tv_labels/3.png', alt='')
+							img.hidden-md-down(src='img/tv_labels/4.png', alt='')
+							img(src='img/tv_labels/5.png', alt='')
+							img(src='img/tv_labels/6.png', alt='')
+							img(src='img/tv_labels/7.png', alt='')
+			section.for_those
+				.container
+					.section_title_overlay
+						h2.section_title For those who do not want to be lazy and skip workouts
+					.row
+						.col-lg-7.col-md-9
+							p
+								| Each day we’re effected by many factors: work, stress, increasing fatigue, bad weather etc. Someday it’s hard
+								| to fight your will to stay at home and skip the training.
+							img.man_with_barbell.hidden-md-up(src='img/man_with_barbell.png', alt='')
+							.header_arrow_and_button_container.d-flex.flex-wrap.justify-content-center.justify-content-md-between.align-items-center
+								.header_arrow_and_button_relative
+									.header_arrow_and_button
+										.header_arrow_and_button_skew
+											.arrow_text
+												p.arrow_default
+													| We represent you a new pre-training complex 
+													span.highlight Fine Fit
+							p.bold
+								| - a special drink that activates the forces inside of you, eliminates laziness, lift ups mood and adds maximum
+								| energy.
+							.three_bottles_and_text.d-flex.justify-content-center.align-items-center
+								img.hidden-sm-down(src='img/three_bottles_and_molekul.png', alt='')
+								p
+									| No matter how tired you may be, you will not only have the strength and desire for training, but its effectiveness
+									| will increase 
+									span.green at least 7 times
+						.col-lg-5.col-md-3
+							img.man_with_barbell.hidden-sm-down(src='img/man_with_barbell.png', alt='')
+			section.complex
+				.container
+					.section_title_overlay
+						h2.section_title
+							| Fine Fit is a completely natural complex,
+							br
+							span consisting exclusively of extracts of plants and vitamins
+					.d-flex.flex-column.flex-md-row.justify-content-between.align-items-start
+						.complex_column.left_complex_column
+							p
+								| Fine Fit has nothing to do with chemical energy drinks, which damage your health. It’s a completely natural drink
+								| with a strong stimulating effect. It makes workouts as intense and pleasant as possible.
+							p
+								| Fine Fit should be taken straight before training. Thanks to the special substances that make up the complex,
+								| it expands the blood vessels and enhances the blood flow, which results in active saturation of muscle tissue
+								| with nutrients and oxygen.
+						.complex_column.center_complex_column.hidden-sm-down.d-flex.justify-content-center
+							img(src='img/man_with_bottle.png', alt='')
+						.complex_column.right_complex_column
+							p
+								| All Fine Fit substances are in an easily digestible form, so that effect is nearly instantaneous.
+								br
+								| A person
+								|               feels a huge surge of energy and there’s no trace left from laziness and apathy.
+							p.bold
+								span.highlight Geranium Extract (DMAA) is the main element of Fine Fit consist.
+								br
+								| It’s a powerful
+								|               stimulant. 10 times stronger and much softer than caffeine.
+								br
+								span.highlight It increases mood, gives energy.
+					include include/section_arrow_and_button
+			section.effects_and_benefits
+				.container
+					.section_title_overlay
+						h2.section_title All effects and benefits of Fine Fit
+					.d-flex.justify-content-center.align-items-center
+						.effects_and_benefits_img_container
+							img.hidden-md-down(src='img/one_bottle_and_molekul.png', alt='')
+						ul.effects_and_benefits_points
+							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
+								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
+								.effects_and_benefits_point_text
+									p.effects_and_benefits_point_title.bold Boosts the endurance, strength and productivity of the training.
+									p.effects_and_benefits_point_desc You will do more and be tired less.
+							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
+								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
+								.effects_and_benefits_point_text
+									p.effects_and_benefits_point_title.bold Accelerates the recovery process after exhausting loads.
+									p.effects_and_benefits_point_desc Even after an active workout, you won’t feel drained nor tired.
+							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
+								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
+								.effects_and_benefits_point_text
+									p.effects_and_benefits_point_title.bold Increases the speed of muscle mass gain.
+									p.effects_and_benefits_point_desc Creates perfect conditions for muscle mass growth.
+							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
+								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
+								.effects_and_benefits_point_text
+									p.effects_and_benefits_point_title.bold Accelerates metabolism, increases fat burning, suppresses appetite.
+									p.effects_and_benefits_point_desc You can quickly lose those extra kilos.
+							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
+								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
+								.effects_and_benefits_point_text
+									p.effects_and_benefits_point_title.bold Lifts up spirit, eliminates apathy.
+									p.effects_and_benefits_point_desc You'll want to go to workout.
+							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
+								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
+								.effects_and_benefits_point_text
+									p.effects_and_benefits_point_title.bold Raise mental capacity and improves the focus of consciousness.
+									p.effects_and_benefits_point_desc If you are engaged in mental work, Fine Fit will increase its effectiveness.
+			section.perfect_if
+				.container
+					.section_title_overlay
+						h2.section_title Fine Fit is perfect for you, if you’re:
+					ul#perfect_if_bx_slider.perfect_if_cards_container
+						li.perfect_if_big_card.d-flex.flex-column.justify-content-between.align-items-start
+							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon1.png', alt='')
+							p.bold Professional athlet
+						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
+							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon2.png', alt='')
+							p.bold Doing power trainings
+						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
+							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon3.png', alt='')
+							p.bold Doing intellectual
+						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
+							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon4.png', alt='')
+							p.bold Into active lifestylework
+						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
+							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon5.png', alt='')
+							p.bold Engaged in fitness
+						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
+							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon6.png', alt='')
+							p.bold Working much and often
+						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
+							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon7.png', alt='')
+							p.bold Night disco lover
+					include include/section_arrow_and_button
+			section.way
+				.container
+					.section_title_overlay
+						h2.section_title Way to take Fine Fit
+					div.d-flex.flex-column.flex-md-row.justify-content-center.align-items-center
+						ul.way_list
+							li.way_list_point.d-flex.justify-content-start.align-items-center
+								img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_1.png')
+								p.bold Dilute <span class="green">1 teaspoon in a glass of water,</span> juice or <br>low-fat milk
+							li.way_list_point.d-flex.justify-content-start.align-items-center
+								img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_2.png')
+								p.bold <span class="green">Drink cocktail</span> in 40 min before training
+							li.way_list_point.d-flex.justify-content-start.align-items-center
+								img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_3.png')
+								p.bold <span class="green">Do workout</span> with increased efficiency and desire,<br> feel a powerful burst of energy
+							li.way_list_point.d-flex.justify-content-start.align-items-center
+								img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_4.png')
+								p.bold <span class="green">Do not exceed a dose</span> of more than 2 teaspoons<br> per day; <span class="green">do not use Fine Fit</span> at least 3 hours<br> before bedtime
+						img.way_glass_and_molekul(src='img/glass_and_molekul.png')
+					.d-flex.flex-wrap.justify-content-center.justify-content-md-between.align-items-center
+							.header_arrow_and_button_relative
+								.header_arrow_and_button
+									.header_arrow_and_button_skew
+										.arrow_text
+											p.bold We rNormally Fine Fit effect comes <span class="highlight">in 10 min</span> after taking
+			section.is
+				.container
+					.section_title_overlay
+						h2.section_title Fine Fit is…
+					ul#is_points_bx_slider.is_points_container.d-flex.justify-content-around.align-items-center
+						li.is_column_points_container
+							.is_point.d-flex.flex-column.justify-content-center.align-items-center
+								img.is_point_icon(src='img/icons/section_is/is_icon_1.png')
+								h3.is_point_title.bold.green Geranium Extract (DMAA)
+								p.is_point_text A powerful stimulant. 10 times stronger than caffeine and much softer. It improves mood and gives energy.
+							.is_point.d-flex.flex-column.justify-content-center.align-items-center
+								img.is_point_icon(src='img/icons/section_is/is_icon_2.png')
+								h3.is_point_title.bold.green Creatine monohydrate
+								p.is_point_text Improves the digestibility of substances, provides a synergistic effect.
+							.is_point.d-flex.flex-column.justify-content-center.align-items-center
+								img.is_point_icon(src='img/icons/section_is/is_icon_3.png')
+								h3.is_point_title.bold.green Arginine nitrate
+								p.is_point_text Activates "pumping", causes a powerful pumping effect of muscles.
+						li.is_column_points_container
+							.is_point.d-flex.flex-column.justify-content-center.align-items-center
+								img.is_point_icon(src='img/icons/section_is/is_icon_4.png')
+								h3.is_point_title.bold.green Schizandrol
+								p.is_point_text Improves physical vigor. Provides a strong stimulating effect.
+							.is_point.d-flex.flex-column.justify-content-center.align-items-center
+								img.is_point_icon(src='img/icons/section_is/is_icon_5.png')
+								h3.is_point_title.bold.green Yohimbe extract
+								p.is_point_text Stimulates the central nervous system, relieves fatigue, raises mood, increases libido.
+							.is_point.d-flex.flex-column.justify-content-center.align-items-center
+								img.is_point_icon(src='img/icons/section_is/is_icon_6.png')
+								h3.is_point_title.bold.green Sodium phosphate
+								p.is_point_text Increases endurance and adaptation to training loads.
+						li.is_column_points_container
+							.is_point.d-flex.flex-column.justify-content-center.align-items-center
+								img.is_point_icon(src='img/icons/section_is/is_icon_7.png')
+								h3.is_point_title.bold.green Schizandrol
+								p.is_point_text Improves physical vigor. Provides a strong stimulating effect.
+							.is_point.d-flex.flex-column.justify-content-center.align-items-center
+								img.is_point_icon(src='img/icons/section_is/is_icon_8.png')
+								h3.is_point_title.bold.green Yohimbe extract
+								p.is_point_text Stimulates the central nervous system, relieves fatigue, raises mood, increases libido.
+							.is_point.d-flex.flex-column.justify-content-center.align-items-center
+								img.is_point_icon(src='img/icons/section_is/is_icon_9.png')
+								h3.is_point_title.bold.green Sodium phosphate
+								p.is_point_text Increases endurance and adaptation to training loads.
+			section.doctor
+				.container
+					.section_title_overlay
+						h2.section_title Fine Fit is the most useful <br>pre-training complex
+					p.section_subtitle from all presented in the market
+					.d-flex.flex-column-reverse.flex-md-row.justify-content-center.align-items-center.align-items-md-start
+						img.doctor_doctor_img(src='img/doctor.png')
+						.doctor_text_container
+							p Scientists and physicians agree that the periodic stimulation of the body benefits. As in these moments the blood begins to circulate faster, as a result, the vessels are cleaned and "trained", dangerous deposits and cholesterol plaques are eliminated. Internal organs receive more nutrients and oxygen, as a consequence, they regenerate and recover faster. The body becomes more resistant to physical and emotional overload.
+							p Unlike many "synthetic analogues" Fine Fit does not have any side effects and is not addictive. This complex passed the necessary certification and was recognized not only harmless, but also useful for health.
+							p.bold.green Along with high efficiency, this made Fine Fit the most popular pre-training complex in the world.
+					include include/section_arrow_and_button
+			section.experts
+				.container
+					.section_title_overlay
+						h2.section_title Experts Know Better!
+					.d-flex.flex-column-reverse.flex-md-row.justify-content-center.align-items-center.align-items-md-start
+						p.experts_text I recommend Fine Fit to anyone who wants to achieve significant results in training. Of course, it won’t make you strong and slim just like that, but it will give you energy, desire, strength and increase your endurance, so that you can do more for training and exhaust less. Recently, I recommend Fine Fit to many of my students, and those who take Fine Fit achieve more.
+						.expert_photo_container
+							.expert_photo
+						.expert_desc
+							p.expert_name.bold Koren M.
+							p.expert_position professional fitness coach
+			section.customers
+				.container
+					.section_title_overlay
+						h2.section_title Our customers say:
+					.d-flex.flex-column.flex-md-row.justify-content-center.align-items-center.align-items-md-start
+						.customers_rewiev
+							blockquote I knew about Fine Fit from one friend of mine, boasting that at a time when he was taking it, walked swayed like Arnie. I didn’t have such goals, but I have problems with stamina, I get tired and exhausted quickly, and therefore I do not do much in training. So I decided to try it. This complex really removes laziness, increases stamina, and adds strength. It got much easier to do more at trainings. As a result, I lost almost 15 kg per month! If you want results, try Fine Fit. I sure you, you’ll be impressed.
+							p.customers_name.bold Martha, 31 y.o.
+						.customers_rewiev
+							blockquote A great pre-training tool! Neither increased heart rate, sweaty palms, nor trembling limbs, nor anything else that other pre-training complexes bring. Opposite, a lot of positive effects. Mood improvement, less rest between approaches, I began trying to do the exercises until the muscles completely relinquished, became less tired, even after intensive training, I return home vigorously. Previously, this could be hardly imagine. This is the healthiest solution I've ever tried. Now it's the only one I use, and the results are already encouraging. I recommend it to all!
+							p.customers_name.bold Paul, 27 y.o.
+			section.on_top
+				.container
+					.section_title_overlay
+						h2.section_title Fine Fit is on top because:
+					.d-flex.flex-column.flex-md-row.justify-content-center.justify-content-md-start.align-items-center.align-items-md-start
+						ul.header_points.d-inline-block
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p Completely natural and safe
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p Carefully balanced, repeatedly improved consist
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p Choice of professional athletes
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p Increase the effectiveness of trainings
+						ul.header_points.d-inline-block
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p 100% bioavailability and complete digestion
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p Good for novice
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p Passed all basic clinical tests
+							.header_point_relative_block
+								.header_point_block
+									li.header_point.d-flex.align-items-center
+										img.check_mark(src='img/icons/check_mark.png', alt='')
+										p Affordable price
+					.on_top_bottle_and_text.d-flex.flex-column-reverse.flex-md-row.justify-content-center.justify-content-md-start.align-items-center
+						.header_medals_container.d-inline-flex.flex-column.flex-md-row.align-items-center
+							.header_bottles_and_medald_container.d-flex.flex-row-reverse.justify-content-center.align-items-center
+								.header_medals_container.d-flex.flex-column.justify-content-center.align-items-center
+									img.header_medal.img-fluid(src='img/medals/header_1_medal.png', alt='')
+									img.header_medal.img-fluid.hidden-md-down(src='img/medals/header_2_medal.png', alt='')
+									img.header_medal.img-fluid.hidden-md-down(src='img/medals/header_3_medal.png', alt='')
+								.header_bottles_container.d-inline-block
+									img.two_bottles(src='img/two_bottles.png', alt='')
+									img.molekul(src='img/molekul.png', alt='')
+						p.bold <span class="highlight">Reach new heights with Fine Fit!</span><br> In fitness, strength training or in regular work.<br> Periodically or whenever it needed.
+					include include/last_section_arrow_and_button
+			include include/footer
+			include include/floating_labels
 
-    // Concatinated and minified scripts
-    script(src='js/bundle.libs.min.js')
-    script(src='js/common.js')
+		// Concatinated and minified scripts
+		script(src='js/bundle.libs.min.js')
+		script(src='js/common.js')

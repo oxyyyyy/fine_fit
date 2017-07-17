@@ -4,465 +4,470 @@
 
 // Editing containers
 @media (min-width: 992px)
-  .container
-    width: 992px
+	.container
+		width: 992px
 @media (min-width: 768px) and (max-width: 991px)
-  .container
-    width: 768px
+	.container
+		width: 768px
 @media (min-width: 576px) and (max-width: 767px)
-  .container
-    width: 576px
+	.container
+		width: 576px
 
 // ------------------------------------ General styles ------------------------------------
 
 // All elements
 // *
 //   transition: $main_trans_prop
+*, :before, :after
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
 
 // Common styles
 body
-  font: 300 24px $font-stack
-  color: $white
-  overflow-x: hidden
+	font: 300 24px $font-stack
+	color: $white
+	overflow-x: hidden
 .page_wrapper
-  overflow-x: hidden
+	overflow-x: hidden
 section
-  padding-top: 10px
-  overflow-x: hidden
-  overflow-y: hidden
-  p
-    margin-bottom: 30px
+	padding-top: 10px
+	overflow-x: hidden
+	overflow-y: hidden
+	p
+		margin-bottom: 30px
 header, section
-  background-size: cover
-  background-position: center center
+	background-size: cover
+	background-position: center center
 
 // Typo styles
 h1
-  font: 900 80px $font-stack
-  text-transform: uppercase
-  white-space: nowrap
-  margin: 0
-  color: $white
-  // XXX: Gradient text works only in -webkit browsers!
-  // background: $silver_white_webkit_gradient
-  // -webkit-background-clip: text
-  // -webkit-text-fill-color: transparent
-  text-shadow: $h1_shadow
-  @media (max-width: $md_screen)
-    font-size: 60px
-  @media (max-width: $sm_screen)
-    font-size: 36px
+	font: 900 80px $font-stack
+	text-transform: uppercase
+	white-space: nowrap
+	margin: 0
+	color: $white
+	// XXX: Gradient text works only in -webkit browsers!
+	// background: $silver_white_webkit_gradient
+	// -webkit-background-clip: text
+	// -webkit-text-fill-color: transparent
+	text-shadow: $h1_shadow
+	@media (max-width: $md_screen)
+		font-size: 60px
+	@media (max-width: $sm_screen)
+		font-size: 36px
 h2.section_title
-  font: 900 40px $font-stack
-  text-transform: uppercase
-  text-align: center
-  margin: 0
-  margin-left: 300px
-  transform: skewX(20deg)
-  @media (max-width: $md_screen)
-    font-size: 30px
-  @media (max-width: $md-sm_screen)
-    margin-left: 0
-    transform: none
-    transform: scaleX(.1)
-  @media (max-width: $sm_screen)
-    font-size: 22px
-  span
-    font-size: 18px
-    position: absolute
-    display: block
-    bottom: -30px
-    left: 0
-    right: 0
-    @media (max-width: $md-sm_screen)
-      font-size: 15px
-      bottom: -45px
+	font: 900 40px $font-stack
+	text-transform: uppercase
+	text-align: center
+	margin: 0
+	margin-left: 300px
+	transform: skewX(20deg)
+	@media (max-width: $md_screen)
+		font-size: 30px
+	@media (max-width: $md-sm_screen)
+		margin-left: 0
+		transform: none
+		transform: scaleX(.1)
+	@media (max-width: $sm_screen)
+		font-size: 22px
+	span
+		font-size: 18px
+		position: absolute
+		display: block
+		bottom: -30px
+		left: 0
+		right: 0
+		@media (max-width: $md-sm_screen)
+			font-size: 15px
+			bottom: -45px
 p.section_subtitle
-  font: 700 18px $font-stack
-  text-align: center
-  color: $white
-  text-transform: uppercase
-  margin-top: -25px
+	font: 700 18px $font-stack
+	text-align: center
+	color: $white
+	text-transform: uppercase
+	margin-top: -25px
 p
-  font: 300 18px $font-stack
-  margin: 0
-  text-align: justify
+	font: 300 18px $font-stack
+	margin: 0
+	text-align: justify
 .bold, span.bold
-  font-weight: 900
-  text-transform: uppercase
+	font-weight: 900
+	text-transform: uppercase
 .highlight, span.highlight
-  color: $accent_color_1
+	color: $accent_color_1
 .green, span.green
-  color: $accent_color_2
+	color: $accent_color_2
 .warning
-  font: 400 13px $font-stack
-  display: inline-block
-  @media (max-width: $sm_screen)
-    font-size: 12px
-    line-height: 12px
-  span
-    font: 500 18px $font-stack
-    text-transform: uppercase
-    color: $warning_color
-    @media (max-width: $sm_screen)
-      font-size: 16px
-      line-height: 12px
+	font: 400 13px $font-stack
+	display: inline-block
+	@media (max-width: $sm_screen)
+		font-size: 12px
+		line-height: 12px
+	span
+		font: 500 18px $font-stack
+		text-transform: uppercase
+		color: $warning_color
+		@media (max-width: $sm_screen)
+			font-size: 16px
+			line-height: 12px
 .header_arrow_and_button_relative
-  width: 620px
-  position: relative
-  left: -45px
-  z-index: 1
-  &:after
-    content: ''
-    position: absolute
-    right: -62px
-    top: 0px
-    border: 42px solid transparent
-    border-left: 20px solid $accent_color_2
+	width: 620px
+	position: relative
+	left: -45px
+	z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		right: -62px
+		top: 0px
+		border: 42px solid transparent
+		border-left: 20px solid $accent_color_2
 .header_arrow_and_button
-  overflow: hidden
-  padding-left: 20px
+	overflow: hidden
+	padding-left: 20px
 .header_arrow_and_button_skew
-  background: $accent_color_2
-  width: 640px
-  transform: skewX(-20deg)
-  @media (max-width: $md-sm_screen)
-    transform: none
-  .arrow_text
-    p
-      margin: 0
-  .btn_main
-    transform: skewX(20deg)
+	background: $accent_color_2
+	width: 640px
+	transform: skewX(-20deg)
+	@media (max-width: $md-sm_screen)
+		transform: none
+	.arrow_text
+		p
+			margin: 0
+	.btn_main
+		transform: skewX(20deg)
 .arrow_text
-  padding: 16px 0
-  transform: skewX(20deg)
-  @media (max-width: $md-sm_screen)
-    transform: none
-  .arrow_title
-    font: 900 24px $font-stack
-    text-transform: uppercase
-    color: $accent_color_1
-    text-shadow: $arrow_title_shadow
-  .arrow_subtitle
-    font-weight: 700
-  .arrow_default
-    font-weight: 900
-    text-transform: uppercase
+	padding: 16px 0
+	transform: skewX(20deg)
+	@media (max-width: $md-sm_screen)
+		transform: none
+	.arrow_title
+		font: 900 24px $font-stack
+		text-transform: uppercase
+		color: $accent_color_1
+		text-shadow: $arrow_title_shadow
+	.arrow_subtitle
+		font-weight: 700
+	.arrow_default
+		font-weight: 900
+		text-transform: uppercase
 .arrow_and_button_small
-  margin-bottom: 30px
-  clear: both
-  .arrow_text
-    margin: 0
-    p
-      margin: 0
-  img
-    margin-right: 20px
-  .btn_main
-    p
-      font-size: 26px
+	margin-bottom: 30px
+	clear: both
+	.arrow_text
+		margin: 0
+		p
+			margin: 0
+	img
+		margin-right: 20px
+	.btn_main
+		p
+			font-size: 26px
 // section arrow and button
 .section_arrow_and_button_container
-  margin-bottom: 30px
-  z-index: 5
+	margin-bottom: 30px
+	z-index: 5
 .section_arrow_and_button
-  background: $base64_section_arrow_body
-  width: 575px
-  height: 81px
-  z-index: 5
-  @media (max-width: $md_screen)
-    width: 455px
-    margin-left: -120px
-  @media (max-width: $md-sm_screen)
-    justify-content: center !important
-    width: 95%
-    margin-bottom: 20px
-    margin-left: 0
-  @media (max-width: $sm_screen)
-    background: $base64_section_sm_arrow_body
-    width: 303px
-    height: 82px
-  &:before
-    content: $base64_section_arrow_start
-    width: 50px
-    height: 81px
-    position: relative
-    left: -66px
-    @media (max-width: $md_screen)
-      content: none
-  &:after
-    content: $base64_section_arrow_end
-    width: 50px
-    height: 81px
-    position: relative
-    right: -87px
-    @media (max-width: $md_screen)
-      right: -50px
-    @media (max-width: $md-sm_screen)
-      right: -150px
-    @media (max-width: $sm_screen)
-      content: none
+	background: $base64_section_arrow_body
+	width: 575px
+	height: 81px
+	z-index: 5
+	@media (max-width: $md_screen)
+		width: 455px
+		margin-left: -120px
+	@media (max-width: $md-sm_screen)
+		justify-content: center !important
+		width: 95%
+		margin-bottom: 20px
+		margin-left: 0
+	@media (max-width: $sm_screen)
+		background: $base64_section_sm_arrow_body
+		width: 303px
+		height: 82px
+	&:before
+		content: $base64_section_arrow_start
+		width: 50px
+		height: 81px
+		position: relative
+		left: -66px
+		@media (max-width: $md_screen)
+			content: none
+	&:after
+		content: $base64_section_arrow_end
+		width: 50px
+		height: 81px
+		position: relative
+		right: -87px
+		@media (max-width: $md_screen)
+			right: -50px
+		@media (max-width: $md-sm_screen)
+			right: -150px
+		@media (max-width: $sm_screen)
+			content: none
 .section_arrow_two_bottles_and_molekul_small
-  margin: -40px 30px 0 -50px
+	margin: -40px 30px 0 -50px
 .section_arrow_text
-  display: inline-block
-  letter-spacing: 2px
-  margin-top: -6px
-  @media (max-width: $md_screen)
-    letter-spacing: 0
-    width: 286px
-  @media (max-width: $md-sm_screen)
-    width: 268px
-  .section_arrow_title
-    font: 900 24px $font-stack
-    text-transform: uppercase
-    color: $accent_color_1
-    text-shadow: $arrow_title_shadow
-    text-align: left
-    margin: 0
-  .section_arrow_subtitle
-    font-weight: 700
-    text-align: left
-    margin: 0
+	display: inline-block
+	letter-spacing: 2px
+	margin-top: -6px
+	@media (max-width: $md_screen)
+		letter-spacing: 0
+		width: 286px
+	@media (max-width: $md-sm_screen)
+		width: 268px
+	.section_arrow_title
+		font: 900 24px $font-stack
+		text-transform: uppercase
+		color: $accent_color_1
+		text-shadow: $arrow_title_shadow
+		text-align: left
+		margin: 0
+	.section_arrow_subtitle
+		font-weight: 700
+		text-align: left
+		margin: 0
 // ---------------------
 ul
-  list-style-type: none
-  padding: 0
-  margin: 0
-  li
-    padding: 12px 8px
-    margin: 5px 0
+	list-style-type: none
+	padding: 0
+	margin: 0
+	li
+		padding: 12px 8px
+		margin: 5px 0
 
 // Overlays
 .warning_overlay
-  background-color: $warning_bg_color
-  padding: 15px 20px
-  box-shadow: $warning_overlay_shadow
-  @media (max-width: $sm_screen)
-    padding: 10px
-  img
-    margin-right: 15px
+	background-color: $warning_bg_color
+	padding: 15px 20px
+	box-shadow: $warning_overlay_shadow
+	@media (max-width: $sm_screen)
+		padding: 10px
+	img
+		margin-right: 15px
 .section_title_overlay
-  margin: 30px 0
-  margin-left: -300px
-  padding: 5px 0
-  background-color: $btn_main_text_color
-  background: $section_title_overlay_gradient
-  transform: skewX(-20deg)
-  @media (max-width: $md-sm_screen)
-    background: none
-    background-color: $btn_main_text_color
-    margin-left: 0
-    transform: none
-    transform: scaleX(10)
+	margin: 30px 0
+	margin-left: -300px
+	padding: 5px 0
+	background-color: $btn_main_text_color
+	background: $section_title_overlay_gradient
+	transform: skewX(-20deg)
+	@media (max-width: $md-sm_screen)
+		background: none
+		background-color: $btn_main_text_color
+		margin-left: 0
+		transform: none
+		transform: scaleX(10)
 
 // Buttons
 .btn_main
-  display: inline-flex
-  padding: 22px 45px
-  margin-bottom: 3px
-  text-transform: uppercase
-  text-decoration: none
-  border-radius: 12px
-  background: $btn_main_bg_gradient
-  box-shadow: $btn_main_shadow
-  // XXX: I cant use inset box-shadow with gradient!
-  // box-shadow: inset 0px 0px 0px 2px $btn_main_border_gradient
-  // transition: $main_trans_prop
-  @media (max-width: $sm_screen)
-    padding: 22px 17px
-  &:hover, &:focus, &:active, &:visited
-    text-decoration: none
-  &:hover
-    // BUG: Floating elements because of flex-box
-    margin-top: 3px
-    margin-bottom: 0
-    background: $btn_main_hovered_bg_gradient
-    box-shadow: none
-    p
-      // NOTE: Gradient text works only in -webkit browsers!
-      background: $btn_main_hovered_text_webkit_gradient
-      -webkit-background-clip: text
-      -webkit-text-fill-color: transparent
-  p
-    font: 900 30px $font-stack
-    color: $btn_main_text_color
-    margin: 0
-    // NOTE: Gradient text works only in -webkit browsers!
-    background: $btn_main_text_webkit_gradient
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
+	display: inline-flex
+	padding: 22px 45px
+	margin-bottom: 3px
+	text-transform: uppercase
+	text-decoration: none
+	border-radius: 12px
+	background: $btn_main_bg_gradient
+	box-shadow: $btn_main_shadow
+	// XXX: I cant use inset box-shadow with gradient!
+	// box-shadow: inset 0px 0px 0px 2px $btn_main_border_gradient
+	// transition: $main_trans_prop
+	@media (max-width: $sm_screen)
+		padding: 22px 16px
+	&:hover, &:focus, &:active, &:visited
+		text-decoration: none
+	&:hover
+		// BUG: Floating elements because of flex-box
+		margin-top: 3px
+		margin-bottom: 0
+		background: $btn_main_hovered_bg_gradient
+		box-shadow: none
+		p
+			// NOTE: Gradient text works only in -webkit browsers!
+			background: $btn_main_hovered_text_webkit_gradient
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+	p
+		font: 900 30px $font-stack
+		color: $btn_main_text_color
+		margin: 0
+		// NOTE: Gradient text works only in -webkit browsers!
+		background: $btn_main_text_webkit_gradient
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
 
 // ------------------------------------ Sections' styles ------------------------------------
 
 // Header
 header
-  padding-top: 5px
-  padding-bottom: 20px
-  background-image: $section_bottom_gradient, url("../img/backgrounds/header_bg.png")
-  @media (max-width: $md_screen)
-    background-position: 48% center
-  @media (max-width: $sm_screen)
-    background-position: 72% center
-  .header_arrow_and_button_relative
-    @media (max-width: $md_screen)
-      width: 400px
-    .arrow_text
-      @media (max-width: $md_screen)
-        margin-left: 40px
-  .section_arrow_and_button_container
-    margin-top: -77px
-    @media (max-width: $md_screen)
-      margin-top: -10px
-    .section_arrow_and_button
-      width: 570px
-      @media (max-width: $md_screen)
-        width: 455px
-      @media (max-width: $sm_screen)
-        width: 303px
-      &:after
-        right: -33px
-        @media (max-width: $md_screen)
-          right: -50px
-        @media (max-width: $md-sm_screen)
-          right: -109px
-      img
-        display: none
-      .section_arrow_text
-        letter-spacing: 0
-        margin-left: 218px
-        width: 410px
-        position: relative
-        left: 25px
-        @media (max-width: $md_screen)
-          position: static
-          width: 286px
-          margin-left: 0
+	padding-top: 5px
+	padding-bottom: 20px
+	background-image: $section_bottom_gradient, url("../img/backgrounds/header_bg.png")
+	@media (max-width: $md_screen)
+		background-position: 48% center
+	@media (max-width: $sm_screen)
+		background-position: 72% center
+	.header_arrow_and_button_relative
+		@media (max-width: $md_screen)
+			width: 400px
+		.arrow_text
+			@media (max-width: $md_screen)
+				margin-left: 40px
+	.section_arrow_and_button_container
+		margin-top: -77px
+		@media (max-width: $md_screen)
+			margin-top: -10px
+		.section_arrow_and_button
+			width: 570px
+			@media (max-width: $md_screen)
+				width: 455px
+			@media (max-width: $sm_screen)
+				width: 303px
+			&:after
+				right: -33px
+				@media (max-width: $md_screen)
+					right: -50px
+				@media (max-width: $md-sm_screen)
+					right: -109px
+			img
+				display: none
+			.section_arrow_text
+				letter-spacing: 0
+				margin-left: 218px
+				width: 410px
+				position: relative
+				left: 25px
+				@media (max-width: $md_screen)
+					position: static
+					width: 286px
+					margin-left: 0
 .header_top_text
-  font-size: 30px
-  text-transform: uppercase
-  letter-spacing: 0.04vw
-  @media (max-width: $md-sm_screen)
-    text-align: center
-  margin-top: 20px
-  margin-bottom: 15px
-  color: $accent_color_1
-  // NOTE: Gradient text works only in -webkit browsers!
-  background: $accent_color_1_webkit_gradient
-  -webkit-background-clip: text
-  -webkit-text-fill-color: transparent
-  @media (max-width: $md_screen)
-    font-size: 23px
-  @media (max-width: $sm_screen)
-    font-size: 18px
+	font-size: 30px
+	text-transform: uppercase
+	letter-spacing: 0.04vw
+	@media (max-width: $md-sm_screen)
+		text-align: center
+	margin-top: 20px
+	margin-bottom: 15px
+	color: $accent_color_1
+	// NOTE: Gradient text works only in -webkit browsers!
+	background: $accent_color_1_webkit_gradient
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	@media (max-width: $md_screen)
+		font-size: 23px
+	@media (max-width: $sm_screen)
+		font-size: 18px
 .header_title_container
-  margin-bottom: 20px
+	margin-bottom: 20px
 .header_after_title
-  font: 700 24px $font-stack
-  text-transform: uppercase
-  @media (max-width: $md_screen)
-    font-size: 18px
-    letter-spacing: 1px
-  @media (max-width: $sm_screen)
-    font-size: 11px
-    letter-spacing: 0.5px
+	font: 700 24px $font-stack
+	text-transform: uppercase
+	@media (max-width: $md_screen)
+		font-size: 18px
+		letter-spacing: 1px
+	@media (max-width: $sm_screen)
+		font-size: 11px
+		letter-spacing: 0.5px
 .header_medals_container
-  margin: 0
-  @media (max-width: $md-sm_screen)
-    margin-left: 80px
-    margin-top: 38px
-  @media (max-width: $sm_screen)
-    margin-left: 15px
-    margin-top: 15px
+	margin: 0
+	@media (max-width: $md-sm_screen)
+		margin-left: 80px
+		margin-top: 38px
+	@media (max-width: $sm_screen)
+		margin-left: 15px
+		margin-top: 15px
 .header_medal
-  margin: 15px
-  @media (max-width: $md-sm_screen)
-    max-width: 80px
-  @media (max-width: $sm_screen)
-    margin: 5px
-    max-width: 55px
+	margin: 15px
+	@media (max-width: $md-sm_screen)
+		max-width: 80px
+	@media (max-width: $sm_screen)
+		margin: 5px
+		max-width: 55px
 .header_bottles_container
-  position: relative
-  z-index: 10
-  @media (max-width: $sm_screen)
-    margin: 0 35px 0 auto
-  .two_bottles
-    // position: absolute
-    position: relative
-    margin-top: 75px
-    @media (max-width: $md_screen)
-      margin-top: 50px
-    @media (max-width: $sm_screen)
-      width: 180px
-      margin-top: 15px
-  .molekul
-    position: absolute
-    top: 225px
-    left: -30px
-    @media (max-width: $md_screen)
-      top: 222px
-      left: 210px
-      width: 140px
-    @media (max-width: $sm_screen)
-      top: 125px
-      left: 125px
-      width: 100px
-  .percent_50_medal
-    position: absolute
-    top: 10px
-    left: 75px
-    @media (max-width: $md_screen)
-      top: 25px
-      left: 222px
-    @media (max-width: $sm_screen)
-      top: 0px
-      left: 135px
-      width: 85px
+	position: relative
+	z-index: 10
+	@media (max-width: $sm_screen)
+		margin: 0 35px 0 auto
+	.two_bottles
+		// position: absolute
+		position: relative
+		margin-top: 75px
+		@media (max-width: $md_screen)
+			margin-top: 50px
+		@media (max-width: $sm_screen)
+			width: 180px
+			margin-top: 15px
+	.molekul
+		position: absolute
+		top: 225px
+		left: -30px
+		@media (max-width: $md_screen)
+			top: 222px
+			left: 210px
+			width: 140px
+		@media (max-width: $sm_screen)
+			top: 125px
+			left: 125px
+			width: 100px
+	.percent_50_medal
+		position: absolute
+		top: 10px
+		left: 75px
+		@media (max-width: $md_screen)
+			top: 25px
+			left: 222px
+		@media (max-width: $sm_screen)
+			top: 0px
+			left: 135px
+			width: 85px
 .header_point_relative_block
-  width: 345px
-  position: relative
-  @media (max-width: $sm_screen)
-    width: 285px
-  &:after
-    content: ''
-    position: absolute
-    right: -45px
-    top: 5px
-    border: 25px solid transparent
-    border-left: 20px solid $header_point_bg
-  &:nth-child(2), &:nth-child(3), &:nth-child(4)
-    &:after
-      right: -55px
-      border: 30px solid transparent
-      border-left: 25px solid $header_point_bg
-      @media (max-width: $sm_screen)
-        right: -51px
-        border: 26px solid transparent
-        border-left: 25px solid $header_point_bg
+	width: 345px
+	position: relative
+	@media (max-width: $sm_screen)
+		width: 285px
+	&:after
+		content: ''
+		position: absolute
+		right: -45px
+		top: 5px
+		border: 25px solid transparent
+		border-left: 20px solid $header_point_bg
+	&:nth-child(2), &:nth-child(3), &:nth-child(4)
+		&:after
+			right: -55px
+			border: 30px solid transparent
+			border-left: 25px solid $header_point_bg
+			@media (max-width: $sm_screen)
+				right: -51px
+				border: 26px solid transparent
+				border-left: 25px solid $header_point_bg
 .header_point_block
-  overflow: hidden
-  padding-left: 14px
+	overflow: hidden
+	padding-left: 14px
 .header_points
-  @media (max-width: $md_screen)
-    margin-top: 150px
-  @media (max-width: $md-sm_screen)
-    margin-top: 0
+	@media (max-width: $md_screen)
+		margin-top: 150px
+	@media (max-width: $md-sm_screen)
+		margin-top: 0
 .header_point
-  background: $header_point_bg
-  width: 365px
-  padding-left: 15px
-  padding-right: 50px
-  transform: skewX(-20deg)
-  @media (max-width: $sm_screen)
-    width: 305px
-  p
-    font: 500 15px $font-stack
-    text-transform: uppercase
-    padding-left: 10px
-    transform: skewX(20deg)
-    @media (max-width: $sm_screen)
-      font-size: 11px
-  img
-    transform: skewX(20deg)
+	background: $header_point_bg
+	width: 365px
+	padding-left: 8px
+	padding-right: 50px
+	transform: skewX(-20deg)
+	@media (max-width: $sm_screen)
+		width: 305px
+	p
+		font: 500 15px $font-stack
+		text-transform: uppercase
+		text-align: left
+		padding-left: 10px
+		transform: skewX(20deg)
+		@media (max-width: $sm_screen)
+			font-size: 11px
+	img
+		transform: skewX(20deg)
 // .header_arrow_and_button_container
 //   margin-top: -80px
 //   @media (max-width: $md_screen)
@@ -474,377 +479,594 @@ header
 //     @media (max-width: $md-sm_screen)
 //       margin-bottom: 30px
 .tv_logos
-  margin-top: 30px
-  p
-    display: inline-block
-    font-size: 17px
-    text-transform: uppercase
-    margin-right: 15px
-    @media (max-width: $sm_screen)
-      font-size: 12px
-  img
-    margin: 5px 28px 5px 0
-    @media (max-width: $md_screen)
-      margin-right: 10px
-      max-width: 100px
-    @media (max-width: $sm_screen)
-      max-width: 57px
+	margin-top: 30px
+	p
+		display: inline-block
+		font-size: 17px
+		text-transform: uppercase
+		margin-right: 15px
+		@media (max-width: $sm_screen)
+			font-size: 12px
+	img
+		margin: 5px 28px 5px 0
+		@media (max-width: $md_screen)
+			margin-right: 10px
+			max-width: 100px
+		@media (max-width: $sm_screen)
+			max-width: 57px
 
 // "For those" section
 section.for_those
-  background-image: $section_bottom_gradient, url("../img/backgrounds/for_those_bg.png")
-  .section_title
-    max-width: 900px
-  p
-    span.green
-      display: block
-      font: 900 40px $font-stack
-      letter-spacing: 3.5px
-      text-align: center
-      @media (max-width: $md-sm_screen)
-        font-size: 24px
-        letter-spacing: 2px
-  .three_bottles_and_text
-    margin-bottom: 10px
-  .man_with_barbell
-    max-width: 634px
-    margin-left: -70px
-    margin-top: -6px
-    @media (max-width: $md_screen)
-      max-width: 540px
-      margin-left: -133px
-      margin-top: 36px
-    @media (max-width: $md-sm_screen)
-      max-width: 100%
-      margin-left: 6%
-      margin-top: 10px
-  .header_arrow_and_button_container
-    margin: 0
-    margin-bottom: 30px
-    .header_arrow_and_button_relative
-      &:after
-        right: -80px
-        top: -32px
-        border: 55px solid transparent
-        border-left: 36px solid #83cf66
-        transform: skewX(-10deg)
-    .arrow_text
-      margin-left: 50px
-    p
-      margin: 0
+	background-image: $section_bottom_gradient, url("../img/backgrounds/for_those_bg.png")
+	.section_title
+		max-width: 900px
+	p
+		span.green
+			display: block
+			font: 900 40px $font-stack
+			letter-spacing: 3.5px
+			text-align: center
+			@media (max-width: $md-sm_screen)
+				font-size: 24px
+				letter-spacing: 2px
+	.three_bottles_and_text
+		margin-bottom: 10px
+	.man_with_barbell
+		max-width: 634px
+		margin-left: -70px
+		margin-top: -6px
+		@media (max-width: $md_screen)
+			max-width: 540px
+			margin-left: -133px
+			margin-top: 36px
+		@media (max-width: $md-sm_screen)
+			max-width: 100%
+			margin-left: 6%
+			margin-top: 10px
+	.header_arrow_and_button_container
+		margin: 0
+		margin-bottom: 30px
+		.header_arrow_and_button_relative
+			&:after
+				right: -80px
+				top: -32px
+				border: 55px solid transparent
+				border-left: 36px solid #83cf66
+				transform: skewX(-10deg)
+		.arrow_text
+			margin-left: 50px
+		p
+			margin: 0
 
 // "Complex" section
 section.complex
-  background-image: $section_bottom_gradient, url("../img/backgrounds/complex_bg.png")
-  .section_title_overlay
-    @media (max-width: $md-sm_screen)
-      padding-bottom: 50px
-  .left_complex_column
-    max-width: 360px
-    p
-      &:first-child
-        @media (max-width: $md-sm_screen)
-          margin-bottom: 25px
-      &:nth-child(2)
-        @media (max-width: $md-sm_screen)
-          margin: 0
-  .center_complex_column
-    max-width: 250px
-  .right_complex_column
-    max-width: 325px
-    p
-      @media (max-width: $md-sm_screen)
-        margin-bottom: 25px !important
-    @media (max-width: $md-sm_screen)
-      margin-top: 0
-  .complex_column
-    margin-top: 30px
-    @media (max-width: $md-sm_screen)
-      max-width: 100%
-      margin: 0
-    p
-      line-height: 30px
-      @media (max-width: $md_screen)
-        line-height: 22px
-      @media (max-width: $md-sm_screen)
-        margin-bottom: 10px
-  .section_arrow_and_button_container
-    margin-top: -114px
-    @media (max-width: $md-sm_screen)
-      margin-top: 0
+	background-image: $section_bottom_gradient, url("../img/backgrounds/complex_bg.png")
+	.section_title_overlay
+		@media (max-width: $md-sm_screen)
+			padding-bottom: 50px
+	.left_complex_column
+		max-width: 360px
+		p
+			&:first-child
+				@media (max-width: $md-sm_screen)
+					margin-bottom: 25px
+			&:nth-child(2)
+				@media (max-width: $md-sm_screen)
+					margin: 0
+	.center_complex_column
+		max-width: 250px
+	.right_complex_column
+		max-width: 325px
+		p
+			@media (max-width: $md-sm_screen)
+				margin-bottom: 25px !important
+		@media (max-width: $md-sm_screen)
+			margin-top: 0
+	.complex_column
+		margin-top: 30px
+		@media (max-width: $md-sm_screen)
+			max-width: 100%
+			margin: 0
+		p
+			line-height: 30px
+			@media (max-width: $md_screen)
+				line-height: 22px
+			@media (max-width: $md-sm_screen)
+				margin-bottom: 10px
+	.section_arrow_and_button_container
+		margin-top: -114px
+		@media (max-width: $md-sm_screen)
+			margin-top: 0
 
 // "Effects and benefits" section
 section.effects_and_benefits
-  background-image: $section_bottom_gradient, url("../img/backgrounds/effects_and_benefits_bg.png")
-  .effects_and_benefits_point_text
-    transform: skewX(20deg)
-    p
-      margin: 0
-      @media (max-width: $sm_screen)
-        font-size: 14px
-  ul
-    margin-bottom: 50px
-    li
-      padding: 12px 8px 12px 25px
-      background-color: $accent_color_2
-      transform: skewX(-20deg)
-      &:nth-child(1)
-        @media (max-width: $md_screen)
-          max-width: 92%
-          &::after
-            right: -40px
-            width: 41px
-          &::before
-            right: -23px
-            width: 40px
-      &:nth-child(2)
-        @media (max-width: $md_screen)
-          &::after
-            right: -42px
-            width: 43px
-          &::before
-            right: -21px
-            width: 42px
-      &:nth-child(3)
-        @media (max-width: $md_screen)
-          max-width: 92%
-      &:nth-child(4)
-        @media (max-width: $md_screen)
-          max-width: 98%
-          &::after
-            right: -40px
-            width: 41px
-          &::before
-            right: -23px
-            width: 40px
-      &:nth-child(5)
-        @media (max-width: $md_screen)
-          max-width: 92%
-      &:nth-child(6)
-        @media (max-width: $md_screen)
-          &::after
-            right: -43px
-            width: 44px
-          &::before
-            right: -22px
-            width: 43px
-      &::after
-        content: ""
-        position: absolute
-        right: -29px
-        bottom: 0
-        width: 30px
-        height: 50%
-        background-color: $accent_color_2
-      &::before
-        content: ""
-        position: absolute
-        top: 0
-        right: -16px
-        transform: skewX(37deg)
-        width: 30px
-        height: 50%
-        background-color: $accent_color_2
-      @media (max-width: $sm_screen)
-        margin-left: -30px
-        max-width: 100% !important
-      img
-        margin-right: 15px
-        transform: skewX(20deg)
-      .effects_and_benefits_point_title
-        color: $accent_color_3
-  .effects_and_benefits_img_container
-    max-width: 188px
-    z-index: 2
-    img
-      margin-left: -110px
-      margin-bottom: -50px
+	background-image: $section_bottom_gradient, url("../img/backgrounds/effects_and_benefits_bg.png")
+	.effects_and_benefits_point_text
+		transform: skewX(20deg)
+		p
+			margin: 0
+			@media (max-width: $sm_screen)
+				font-size: 14px
+	ul
+		margin-bottom: 50px
+		li
+			padding: 12px 8px 12px 25px
+			background-color: $accent_color_2
+			transform: skewX(-20deg)
+			&:nth-child(1)
+				@media (max-width: $md_screen)
+					max-width: 92%
+					&::after
+						right: -40px
+						width: 41px
+					&::before
+						right: -23px
+						width: 40px
+			&:nth-child(2)
+				@media (max-width: $md_screen)
+					&::after
+						right: -42px
+						width: 43px
+					&::before
+						right: -21px
+						width: 42px
+			&:nth-child(3)
+				@media (max-width: $md_screen)
+					max-width: 92%
+			&:nth-child(4)
+				@media (max-width: $md_screen)
+					max-width: 98%
+					&::after
+						right: -40px
+						width: 41px
+					&::before
+						right: -23px
+						width: 40px
+			&:nth-child(5)
+				@media (max-width: $md_screen)
+					max-width: 92%
+			&:nth-child(6)
+				@media (max-width: $md_screen)
+					&::after
+						right: -43px
+						width: 44px
+					&::before
+						right: -22px
+						width: 43px
+			&::after
+				content: ""
+				position: absolute
+				right: -29px
+				bottom: 0
+				width: 30px
+				height: 50%
+				background-color: $accent_color_2
+			&::before
+				content: ""
+				position: absolute
+				top: 0
+				right: -16px
+				transform: skewX(37deg)
+				width: 30px
+				height: 50%
+				background-color: $accent_color_2
+			@media (max-width: $sm_screen)
+				margin-left: -30px
+				max-width: 100% !important
+			img
+				margin-right: 15px
+				transform: skewX(20deg)
+			.effects_and_benefits_point_title
+				color: $accent_color_3
+	.effects_and_benefits_img_container
+		max-width: 188px
+		z-index: 2
+		img
+			margin-left: -110px
+			margin-bottom: -50px
 
 // "Perfect if" section
 section.perfect_if
-  background-image: $section_bottom_gradient, url("../img/backgrounds/perfect_if_bg.png")
-  .section_arrow_and_button_container
-    margin-top: 450px
-    @media (max-width: $md-sm_screen)
-      margin-top: 30px
+	background-image: $section_bottom_gradient, url("../img/backgrounds/perfect_if_bg.png")
+	.section_arrow_and_button_container
+		margin-top: 450px
+		@media (max-width: $md-sm_screen)
+			margin-top: 30px
 .perfect_if_big_card, .perfect_if_small_card
-  border: 4px solid $accent_color_2
-  width: 23.6%
-  padding: 22px
-  margin-top: 0
-  float: left
-  @media (max-width: $md_screen)
-    padding: 10px
-    width: 23.1%
-  @media (max-width: $md-sm_screen)
-    margin: 0 !important
-    margin-right: 10px !important
-    img
-      max-width: 70px
-  p
-    margin: 0
-    text-align: left
-    @media (max-width: $md_screen)
-      font-size: 16px
+	border: 4px solid $accent_color_2
+	width: 23.6%
+	padding: 22px
+	margin-top: 0
+	float: left
+	@media (max-width: $md_screen)
+		padding: 10px
+		width: 23.1%
+	@media (max-width: $md-sm_screen)
+		margin: 0 !important
+		margin-right: 10px !important
+		img
+			max-width: 70px
+	p
+		margin: 0
+		text-align: left
+		@media (max-width: $md_screen)
+			font-size: 16px
 .perfect_if_big_card
-  width: 25%
-  height: 380px
-  margin: 5px
-  @media (max-width: $md-sm_screen)
-    height: 185px
+	width: 25%
+	height: 380px
+	margin: 5px
+	@media (max-width: $md-sm_screen)
+		height: 185px
 .perfect_if_small_card
-  height: 185px
-  margin: 5px
-  img
-    @media (max-width: $md_screen)
-      margin: 5px
+	height: 185px
+	margin: 5px
+	img
+		@media (max-width: $md_screen)
+			margin: 5px
 .bx-wrapper
-  background-color: transparent
-  border: none
-  box-shadow: none
+	background-color: transparent
+	border: none
+	box-shadow: none
 .bx-pager-link
-  background: $white !important
+	background: $white !important
 .active
-  background: $accent_color_2 !important
+	background: $accent_color_2 !important
 
 // "Way" section
 section.way
-  background-image: $section_bottom_gradient, url("../img/backgrounds/way_bg.png")
-  background-position: 30%
-  @media (max-width: $md_screen)
-    background-position: 55%
-  @media (max-width: $md_screen)
-    background-position: 30%
-  ul
-    display: inline-block
-    max-width: 700px
-    @media (max-width: $md-sm_screen)
-      max-width: 100%
-    li
-      &:nth-child(even)
-        margin-left: 50px
-        @media (max-width: $md-sm_screen)
-          margin-left: 0
-      img
-        margin-right: 20px
-      p
-        margin: 0
-        @media (max-width: $md-sm_screen)
-          font-size: 16px
-        br
-          @media (max-width: $md_screen)
-            display: none
-  .way_glass_and_molekul
-    max-width: 220px
-    margin-top: 30px
-    @media (max-width: $md-sm_screen)
-      max-width: 30%
+	background-image: $section_bottom_gradient, url("../img/backgrounds/way_bg.png")
+	background-position: 30%
+	@media (max-width: $md_screen)
+		background-position: 55%
+	@media (max-width: $md_screen)
+		background-position: 30%
+	ul
+		display: inline-block
+		max-width: 700px
+		@media (max-width: $md-sm_screen)
+			max-width: 100%
+		li
+			&:nth-child(even)
+				margin-left: 50px
+				@media (max-width: $md-sm_screen)
+					margin-left: 0
+			img
+				margin-right: 20px
+			p
+				margin: 0
+				@media (max-width: $md-sm_screen)
+					font-size: 16px
+				br
+					@media (max-width: $md_screen)
+						display: none
+	.way_glass_and_molekul
+		max-width: 220px
+		margin-top: 30px
+		@media (max-width: $md-sm_screen)
+			max-width: 30%
 
 // "Is" section
 section.is
-  background-image: $section_bottom_gradient, url("../img/backgrounds/is_bg.png")
-  .is_column_points_container
-    max-width: 30%
-    .is_point
-      text-align: center
-      margin-bottom: 25px
-      height: 150px
-      .is_point_icon
-        margin-bottom: 15px
-      h3
-        font-size: 18px
-      p
-        font-size: 14px
-        text-align: center
+	background-image: $section_bottom_gradient, url("../img/backgrounds/is_bg.png")
+	.is_column_points_container
+		max-width: 30%
+		.is_point
+			text-align: center
+			margin-bottom: 25px
+			height: 150px
+			.is_point_icon
+				margin-bottom: 15px
+			h3
+				font-size: 18px
+			p
+				font-size: 14px
+				text-align: center
 
 // "Doctor" section
 section.doctor
-  background-image: $section_bottom_gradient, url("../img/backgrounds/doctor_bg.png")
-  .doctor_doctor_img
-    margin-top: -150px
-    margin-left: -120px
-    z-index: 1
-    @media (max-width: $md-sm_screen)
-      margin: 0
-      width: 60%
-    @media (max-width: $sm_screen)
-      width: 85%
-  .section_arrow_and_button_container
-    margin-top: -150px
-    @media (max-width: $md_screen)
-      margin-top: -30px
-    @media (max-width: $md-sm_screen)
-      margin-top: 0
+	background-image: $section_bottom_gradient, url("../img/backgrounds/doctor_bg.png")
+	.doctor_doctor_img
+		margin-top: -150px
+		margin-left: -120px
+		z-index: 1
+		@media (max-width: $md-sm_screen)
+			margin: 0
+			width: 60%
+		@media (max-width: $sm_screen)
+			width: 85%
+	.section_arrow_and_button_container
+		margin-top: -150px
+		@media (max-width: $md_screen)
+			margin-top: -30px
+		@media (max-width: $md-sm_screen)
+			margin-top: 0
 
 // "Experts" section
 section.experts
-  background-image: $section_bottom_gradient, url("../img/backgrounds/experts_bg.png")
-  background-position: 48%
-  padding-bottom: 60px
-  @media (max-width: $md_screen)
-    background-position: 54%
-  @media (max-width: $md-sm_screen)
-    background-position: 25%
-    padding-bottom: 10px
-  .experts_text
-    background: $base64_experts_text_bg
-    background-size: contain
-    width: 602px
-    height: 440px
-    padding: 120px 190px 60px 36px
-    line-height: 32px
-    @media (max-width: $md_screen)
-      height: 360px
-      padding: 75px 135px 30px 30px
-      margin-top: 50px
-      line-height: 26px
-    @media (max-width: $md-sm_screen)
-      background: $base64_experts_text_sm_bg
-      background-size: cover
-      max-width: 313px
-      padding: 85px 25px 20px 20px
-      margin-top: 20px
-      font-size: 16px
-      line-height: 25px
-  .expert_photo_container
-    width: 305px
-    height: 480px
-    border: 4px solid $accent_color_2
-    overflow: hidden
-    transform: skewX(-16deg)
-    @media (max-width: $md-sm_screen)
-      width: 235px
-      height: 235px
-    .expert_photo
-      background: url("../img/expert.png")
-      width: 435px
-      height: 100%
-      position: relative
-      left: -70px
-      transform: skewX(16deg)
-      @media (max-width: $md_screen)
-        left: -80px
-      @media (max-width: $md-sm_screen)
-        left: -40px
-        background-size: 70%
-  .expert_desc
-    background: $expert_desc_bg_gradient
-    padding: 10px 100px
-    transform: skewX(-16deg)
-    position: absolute
-    right: 47px
-    bottom: 20px
-    @media (max-width: $md_screen)
-      padding: 10px 50px
-      right: 36px
-    @media (max-width: $md-sm_screen)
-      padding: 10px 20px
-      bottom: 430px
-      right: 95px
-    .expert_name
-      color: $accent_color_3
-      transform: skewX(16deg)
-    .expert_name, .expert_position
-      text-align: center
-      margin: 0
-      transform: skewX(16deg)
+	background-image: $section_bottom_gradient, url("../img/backgrounds/experts_bg.png")
+	background-position: 48%
+	padding-bottom: 60px
+	@media (max-width: $md_screen)
+		background-position: 54%
+	@media (max-width: $md-sm_screen)
+		background-position: 25%
+		padding-bottom: 10px
+	.experts_text
+		background: $base64_experts_text_bg
+		background-size: contain
+		width: 602px
+		height: 440px
+		padding: 120px 190px 60px 36px
+		line-height: 32px
+		@media (max-width: $md_screen)
+			height: 360px
+			padding: 75px 135px 30px 30px
+			margin-top: 50px
+			line-height: 26px
+		@media (max-width: $md-sm_screen)
+			background: $base64_experts_text_sm_bg
+			background-size: cover
+			max-width: 313px
+			padding: 85px 25px 20px 20px
+			margin-top: 20px
+			font-size: 16px
+			line-height: 25px
+	.expert_photo_container
+		width: 305px
+		height: 480px
+		border: 4px solid $accent_color_2
+		overflow: hidden
+		transform: skewX(-16deg)
+		@media (max-width: $md-sm_screen)
+			width: 235px
+			height: 235px
+		.expert_photo
+			background: url("../img/expert.png")
+			width: 435px
+			height: 100%
+			position: relative
+			left: -70px
+			transform: skewX(16deg)
+			@media (max-width: $md_screen)
+				left: -80px
+			@media (max-width: $md-sm_screen)
+				left: -40px
+				background-size: 70%
+	.expert_desc
+		background: $expert_desc_bg_gradient
+		padding: 10px 100px
+		transform: skewX(-16deg)
+		position: absolute
+		right: 47px
+		bottom: 20px
+		@media (max-width: $md_screen)
+			padding: 10px 50px
+			right: 36px
+		@media (max-width: $md-sm_screen)
+			padding: 10px 20px
+			bottom: 430px
+			right: 95px
+		.expert_name
+			color: $accent_color_3
+			transform: skewX(16deg)
+		.expert_name, .expert_position
+			text-align: center
+			margin: 0
+			transform: skewX(16deg)
+
+// "Customers" section
+section.customers
+	background-image: $section_bottom_gradient, url("../img/backgrounds/customers_bg.png")
+	padding-bottom: 50px
+	.customers_rewiev
+		max-width: 47%
+		height: 430px 
+		border: 4px solid $accent_color_2
+		text-align: justify
+		margin: 10px
+		padding: 40px 25px
+		&:before
+			content: $base64_quote
+			position: absolute
+			top: 74px
+		&:after
+			position: absolute
+			bottom: -36px
+			width: 73px
+		&:nth-child(1)
+			&:after
+				content: $base64_customer_first
+				left: 22%
+		&:nth-child(2)
+			&:after
+				content: $base64_customer_second
+				right: 22%
+		blockquote
+			font-size: 18px
+			margin-bottom: 25px
+		.customers_name
+			margin: 0
+			margin-top: 25px
+
+// "On top" section
+section.on_top
+	background-image: $last_section_bottom_gradient, url("../img/backgrounds/header_bg.png")
+	background-position: 42%
+	padding-bottom: 50px
+	@media (max-width: $md-sm_screen)
+		background-position: 0
+	.header_points
+		&:first-child
+			@media (max-width: $md_screen)
+				margin: 0
+		&:last-child
+			margin-top: 75px
+			margin-left: 30px
+			@media (max-width: $md_screen)
+				margin-left: 20px
+			@media (max-width: $md-sm_screen)
+				margin: 0
+		.header_point
+			p
+				margin: 0
+	.header_points:first-child
+		.header_point_relative_block:nth-child(3):after
+			right: -51px
+			border: 26px solid transparent
+			border-left: 25px solid $header_point_bg
+	.header_points:last-child
+		.header_point_relative_block:nth-child(1):after
+			right: -50px
+			border: 30px solid transparent
+			border-left: 20px solid $header_point_bg
+		.header_point_relative_block:nth-child(2):after, .header_point_relative_block:nth-child(3):after, .header_point_relative_block:nth-child(4):after
+			right: -51px
+			border: 26px solid transparent
+			border-left: 25px solid $header_point_bg
+	.on_top_bottle_and_text
+		p
+			font-weight: 600
+			font-size: 24px
+			line-height: 35px
+			text-align: left
+			margin: 0
+			@media (max-width: $md_screen)
+				br:last-child
+					display: none
+			@media (max-width: $md-sm_screen)
+				margin: 15px 0
+				font-size: 18px
+				line-height: initial
+				text-align: center
+	.section_arrow_and_button_container
+		margin: 0
+		margin-top: -10px
+		@media (max-width: $md_screen)
+			margin: -5px
+	.section_arrow_and_button:after
+		right: -33px
+		@media (max-width: $md_screen)
+			right: -50px
+		@media (max-width: $md-sm_screen)
+			right: -78px
+	.section_arrow_text
+		letter-spacing: initial
+		@media (max-width: $md-sm_screen)
+			width: 80%
+		p
+			font-size: 22px
+			margin: 0
+			@media (max-width: $md_screen)
+				font-size: 18px
+				text-align: left
+			@media (max-width: $md-sm_screen)
+				font-size: 15px
+	.header_medals_container
+		@media (max-width: $md-sm_screen)
+			margin: auto
+		.header_medal
+			position: absolute
+			z-index: 20
+			&:nth-child(1)
+				width: 100px
+				bottom: 180px
+				left: -10px
+				@media (max-width: $md-sm_screen)
+					position: static
+			&:nth-child(2)
+				right: 0
+				top: 70px
+				@media (max-width: $md-sm_screen)
+					display: block !important
+					position: static
+			&:nth-child(3)
+				right: 90px
+				top: 70px
+				@media (max-width: $md-sm_screen)
+					display: block !important
+					position: static
+	.two_bottles
+		max-width: 180px
+		margin: 0
+		margin-right: 30px
+		margin-left: 50px
+		@media (max-width: $md_screen)
+			margin-right: 50px
+		@media (max-width: $md-sm_screen)
+			margin: 0
+	.molekul
+		width: 85px
+		top: 120px
+		left: -10px
+
+// Footer
+footer
+	padding: 20px 0 100px 0
+	background: $footer_bg_color
+	p
+		color: $footer_font_color
+	.footer_logo
+		background: $base64_footer_logo
+		width: 147px
+		height: 32px
+		margin-bottom: 15px
+	.footer_links
+		margin-bottom: 15px
+		a
+			font-size: 12px
+			font-weight: 700
+			color: $accent_color_2
+			text-decoration: underline
+			margin: 0 15px
+			@media (max-width: $sm_screen)
+				margin: 0 2px
+			&:first-child
+				margin-left: 0
+	.warning
+		font-size: 12px
+		line-height: 20px
+		margin-bottom: 15px
+		span
+			font-size: 16px
+			text-transform: none
+	.footer_copyright
+		p
+			font-size: 12px
+			margin-bottom: 5px
+	.footer_credit_cards
+		p
+			font: 700 18px $font-stack
+			font-style: italic
+			text-transform: uppercase
+			margin-right: 15px
+		.credit_card_visa, .credit_card_visa_electron,.credit_card_mastercard, .credit_card_paypal, .credit_card_american_express
+			background-size: cover !important
+			width: 34px
+			height: 22px
+			margin: 3px
+		.credit_card_visa
+			background: $base64_credit_card_visa
+		.credit_card_visa_electron
+			background: $base64_credit_card_visa_electron
+		.credit_card_mastercard
+			background: $base64_credit_card_mastercard
+		.credit_card_paypal
+			background: $base64_credit_card_paypal
+		.credit_card_american_express
+			background: $base64_credit_card_american_express
+
+// Floating labels
+.safebuy_label, .doctor_label
+	position: fixed
+	bottom: 0
+	z-index: 50
+.safebuy_label
+	background: $base64_safebuy_label
+	width: 159px
+	height: 62px
+	left: 11.5%
+.doctor_label
+	background: $base64_doctor_label
+	width: 214px
+	height: 109px
+	right: 11.5%
