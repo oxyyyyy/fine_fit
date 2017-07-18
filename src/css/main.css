@@ -670,6 +670,7 @@ section.effects_and_benefits {
       margin: 0; }
       @media (max-width: 600px) {
         section.effects_and_benefits .effects_and_benefits_point_text p {
+          text-align: left;
           font-size: 14px; } }
   section.effects_and_benefits ul {
     margin-bottom: 50px; }
@@ -686,6 +687,11 @@ section.effects_and_benefits {
           section.effects_and_benefits ul li:nth-child(1)::before {
             right: -23px;
             width: 40px; } }
+      @media (max-width: 600px) {
+        section.effects_and_benefits ul li:nth-child(1)::after {
+          right: -37px; }
+        section.effects_and_benefits ul li:nth-child(1)::before {
+          right: -20px; } }
       @media (max-width: 991px) {
         section.effects_and_benefits ul li:nth-child(2)::after {
           right: -42px;
@@ -696,6 +702,13 @@ section.effects_and_benefits {
       @media (max-width: 991px) {
         section.effects_and_benefits ul li:nth-child(3) {
           max-width: 92%; } }
+      @media (max-width: 600px) {
+        section.effects_and_benefits ul li:nth-child(3)::before {
+          right: -18px;
+          width: 35px; }
+        section.effects_and_benefits ul li:nth-child(3)::after {
+          right: -35px;
+          width: 36px; } }
       @media (max-width: 991px) {
         section.effects_and_benefits ul li:nth-child(4) {
           max-width: 98%; }
@@ -705,9 +718,19 @@ section.effects_and_benefits {
           section.effects_and_benefits ul li:nth-child(4)::before {
             right: -23px;
             width: 40px; } }
+      @media (max-width: 600px) {
+        section.effects_and_benefits ul li:nth-child(4)::after {
+          right: -44px;
+          width: 45px; }
+        section.effects_and_benefits ul li:nth-child(4)::before {
+          width: 44px; } }
       @media (max-width: 991px) {
         section.effects_and_benefits ul li:nth-child(5) {
           max-width: 92%; } }
+      @media (max-width: 600px) {
+        section.effects_and_benefits ul li:nth-child(5)::after {
+          right: -30px;
+          width: 31px; } }
       @media (max-width: 991px) {
         section.effects_and_benefits ul li:nth-child(6)::after {
           right: -43px;
@@ -715,6 +738,13 @@ section.effects_and_benefits {
         section.effects_and_benefits ul li:nth-child(6)::before {
           right: -22px;
           width: 43px; } }
+      @media (max-width: 600px) {
+        section.effects_and_benefits ul li:nth-child(6)::after {
+          right: -48px;
+          width: 49px; }
+        section.effects_and_benefits ul li:nth-child(6)::before {
+          right: -24px;
+          width: 48px; } }
       section.effects_and_benefits ul li::after {
         content: "";
         position: absolute;
@@ -735,7 +765,7 @@ section.effects_and_benefits {
       @media (max-width: 600px) {
         section.effects_and_benefits ul li {
           margin-left: -30px;
-          max-width: 100% !important; } }
+          max-width: 320px !important; } }
       section.effects_and_benefits ul li img {
         margin-right: 15px;
         transform: skewX(20deg); }

@@ -618,6 +618,7 @@ section.effects_and_benefits
 		p
 			margin: 0
 			@media (max-width: $sm_screen)
+				text-align: left
 				font-size: 14px
 	ul
 		margin-bottom: 50px
@@ -634,6 +635,11 @@ section.effects_and_benefits
 					&::before
 						right: -23px
 						width: 40px
+				@media (max-width: $sm_screen)
+					&::after
+						right: -37px
+					&::before
+						right: -20px
 			&:nth-child(2)
 				@media (max-width: $md_screen)
 					&::after
@@ -645,6 +651,13 @@ section.effects_and_benefits
 			&:nth-child(3)
 				@media (max-width: $md_screen)
 					max-width: 92%
+				@media (max-width: $sm_screen)
+					&::before
+						right: -18px
+						width: 35px
+					&::after
+						right: -35px
+						width: 36px
 			&:nth-child(4)
 				@media (max-width: $md_screen)
 					max-width: 98%
@@ -654,9 +667,19 @@ section.effects_and_benefits
 					&::before
 						right: -23px
 						width: 40px
+				@media (max-width: $sm_screen)
+					&::after
+						right: -44px
+						width: 45px
+					&::before
+						width: 44px
 			&:nth-child(5)
 				@media (max-width: $md_screen)
 					max-width: 92%
+				@media (max-width: $sm_screen)
+					&::after
+						right: -30px
+						width: 31px
 			&:nth-child(6)
 				@media (max-width: $md_screen)
 					&::after
@@ -665,6 +688,13 @@ section.effects_and_benefits
 					&::before
 						right: -22px
 						width: 43px
+				@media (max-width: $sm_screen)
+					&::after
+						right: -48px
+						width: 49px
+					&::before
+						right: -24px
+						width: 48px
 			&::after
 				content: ""
 				position: absolute
@@ -684,7 +714,7 @@ section.effects_and_benefits
 				background-color: $accent_color_2
 			@media (max-width: $sm_screen)
 				margin-left: -30px
-				max-width: 100% !important
+				max-width: 320px !important
 			img
 				margin-right: 15px
 				transform: skewX(20deg)
