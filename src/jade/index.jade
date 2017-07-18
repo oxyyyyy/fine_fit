@@ -1,27 +1,18 @@
 doctype html
 html(lang='en')
-	head
-		// Required meta tags
-		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-		meta(name='author', content='Alexandr Vlasenko')
-		// Title
-		title #{title}
-		// Concatinated and minified stylesheets
-		link(rel='stylesheet', href='css/bundle.libs.min.css')
-		link(rel='stylesheet', href='css/main.min.css')
+
+	include include/head
+
 	body.index
 		.page_wrapper
+
 			header
 				.container
 					include include/warning_message
-					p.header_top_text.bold Increase the effectiveness of training at least 7 times!
+					p.header_top_text.bold #{header.header_top_text}
 					.header_title_container.d-flex.flex-column.flex-md-row.justify-content-between.align-items-center
-						h1 Fine Fit :
-						p.header_after_title
-							| pre-training complex of a new generation 
-							br
-							|  with a high content of geranium extract
+						h1 #{header.header_h1}
+						p.header_after_title #{header.header_after_title.first_line}<br>#{header.header_after_title.second_line}
 					.header_bottles_and_points_container.d-flex.flex-column-reverse.flex-md-row.align-items-center.align-items-md-start
 						.d-flex.flex-row-reverse.flex-md-column
 							.header_medals_container.d-inline-flex.flex-column.flex-md-row.align-items-center
@@ -37,25 +28,25 @@ html(lang='en')
 								.header_point_block
 									li.header_point.d-flex.align-items-center
 										img.check_mark(src='img/icons/check_mark.png', alt='')
-										p Raise Stamina and strength
+										p #{header.header_points.header_point_1}
 							.header_point_relative_block
 								.header_point_block
 									li.header_point.d-flex.align-items-center
 										img.check_mark(src='img/icons/check_mark.png', alt='')
-										p Improves brain and physical activity by 300%
+										p #{header.header_points.header_point_2}
 							.header_point_relative_block
 								.header_point_block
 									li.header_point.d-flex.align-items-center
 										img.check_mark(src='img/icons/check_mark.png', alt='')
-										p Effects rapid fat burning and muscle mass gain
+										p #{header.header_points.header_point_3}
 							.header_point_relative_block
 								.header_point_block
 									li.header_point.d-flex.align-items-center
 										img.check_mark(src='img/icons/check_mark.png', alt='')
-										p The most popular pre-training complex in the world
+										p #{header.header_points.header_point_4}
 					include include/section_arrow_and_button
 					.tv_logos.d-flex.justify-content-between.align-items-center
-						p as seen on tv:
+						p #{header.tv}
 						.tv_logos_container.d-flex-inline.flex-wrap.justify-content-between.align-items-center
 							img(src='img/tv_labels/1.png', alt='')
 							img(src='img/tv_labels/2.png', alt='')
@@ -64,28 +55,24 @@ html(lang='en')
 							img(src='img/tv_labels/5.png', alt='')
 							img(src='img/tv_labels/6.png', alt='')
 							img(src='img/tv_labels/7.png', alt='')
+
 			section.for_those
 				.container
 					.section_title_overlay
-						h2.section_title For those who do not want to be lazy and skip workouts
+						h2.section_title #{sections.for_those.section_title}
 					.row
 						.col-lg-7.col-md-9
-							p
-								| Each day we’re effected by many factors: work, stress, increasing fatigue, bad weather etc. Someday it’s hard
-								| to fight your will to stay at home and skip the training.
+							p #{sections.for_those.first_p}
 							img.man_with_barbell.hidden-md-up(src='img/man_with_barbell.png', alt='')
 							include include/for_those_sharp_arrow
-							p.bold
-								| - a special drink that activates the forces inside of you, eliminates laziness, lift ups mood and adds maximum
-								| energy.
+							p.bold #{sections.for_those.second_p}
 							.three_bottles_and_text.d-flex.justify-content-center.align-items-center
 								img.hidden-sm-down(src='img/three_bottles_and_molekul.png', alt='')
-								p
-									| No matter how tired you may be, you will not only have the strength and desire for training, but its effectiveness
-									| will increase 
-									span.green at least 7 times
+								p #{sections.for_those.third_p}
+									span.green #{sections.for_those.highlighted_p}
 						.col-lg-5.col-md-3
 							img.man_with_barbell.hidden-sm-down(src='img/man_with_barbell.png', alt='')
+
 			section.complex
 				.container
 					.section_title_overlay
@@ -118,6 +105,7 @@ html(lang='en')
 								br
 								span.highlight It increases mood, gives energy.
 					include include/section_arrow_and_button
+
 			section.effects_and_benefits
 				.container
 					.section_title_overlay
@@ -156,6 +144,7 @@ html(lang='en')
 								.effects_and_benefits_point_text
 									p.effects_and_benefits_point_title.bold Raise mental capacity and improves the focus of consciousness.
 									p.effects_and_benefits_point_desc If you are engaged in mental work, Fine Fit will increase its effectiveness.
+
 			section.perfect_if
 				.container
 					.section_title_overlay
@@ -183,6 +172,7 @@ html(lang='en')
 							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon7.png', alt='')
 							p.bold Night disco lover
 					include include/section_arrow_and_button
+
 			section.way
 				.container
 					.section_title_overlay
@@ -203,6 +193,7 @@ html(lang='en')
 								p.bold <span class="green">Do not exceed a dose</span> of more than 2 teaspoons<br> per day; <span class="green">do not use Fine Fit</span> at least 3 hours<br> before bedtime
 						img.way_glass_and_molekul(src='img/glass_and_molekul.png', alt='')
 					include include/way_sharp_arrow
+
 			section.is
 				.container
 					.section_title_overlay
@@ -247,6 +238,7 @@ html(lang='en')
 								img.is_point_icon(src='img/icons/section_is/is_icon_9.png', alt='')
 								h3.is_point_title.bold.green Sodium phosphate
 								p.is_point_text Increases endurance and adaptation to training loads.
+
 			section.doctor
 				.container
 					.section_title_overlay
@@ -259,6 +251,7 @@ html(lang='en')
 							p Unlike many "synthetic analogues" Fine Fit does not have any side effects and is not addictive. This complex passed the necessary certification and was recognized not only harmless, but also useful for health.
 							p.bold.green Along with high efficiency, this made Fine Fit the most popular pre-training complex in the world.
 					include include/section_arrow_and_button
+
 			section.experts
 				.container
 					.section_title_overlay
@@ -270,6 +263,7 @@ html(lang='en')
 						.expert_desc
 							p.expert_name.bold Koren M.
 							p.expert_position professional fitness coach
+
 			section.customers
 				.container
 					.section_title_overlay
@@ -281,6 +275,7 @@ html(lang='en')
 						li.customers_rewiev
 							blockquote A great pre-training tool! Neither increased heart rate, sweaty palms, nor trembling limbs, nor anything else that other pre-training complexes bring. Opposite, a lot of positive effects. Mood improvement, less rest between approaches, I began trying to do the exercises until the muscles completely relinquished, became less tired, even after intensive training, I return home vigorously. Previously, this could be hardly imagine. This is the healthiest solution I've ever tried. Now it's the only one I use, and the results are already encouraging. I recommend it to all!
 							p.customers_name.bold Paul, 27 y.o.
+
 			section.on_top
 				.container
 					.section_title_overlay
@@ -340,6 +335,7 @@ html(lang='en')
 									img.molekul(src='img/molekul.png', alt='')
 						p.bold <span class="highlight">Reach new heights with Fine Fit!</span><br> In fitness, strength training or in regular work.<br> Periodically or whenever it needed.
 					include include/last_section_arrow_and_button
+					
 			include include/footer
 			include include/floating_labels
 

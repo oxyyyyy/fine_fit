@@ -1,0 +1,40 @@
+{
+	"title" : "Fine Fit",
+	"button": "easy purchase",
+	"section_arrow_and_button": {
+		"title": "we keep performing!",
+		"subtitle": "Over 39 000 satisfied customers!"
+	},
+		"warning_message": {
+		"warning_span": "WARNING!",
+		"warning_text": "Because of all the media attention our stores are struggling to keep the stocks up. As of March 31 2017, we have a limited supply of products to ship within 24 hours."
+	},
+	"header": {
+		"header_top_text": "Increase the effectiveness of training at least 7 times!",
+		"header_h1": "Fine Fit :",
+		"header_after_title": {
+			"first_line": "pre-training complex of a new generation",
+			"second_line": "with a high content of geranium extract"
+		},
+		"header_points": {
+			"header_point_1": "Raise Stamina and strength",
+			"header_point_2": "Improves brain and physical activity by 300%",
+			"header_point_3": "Effects rapid fat burning and muscle mass gain",
+			"header_point_4": "The most popular pre-training complex in the world"
+		},
+		"tv": "as seen on tv:"
+	},
+	"sections": {
+		"for_those": {
+			"section_title": "For those who do not want to be lazy and skip workouts",
+			"first_p": "Each day we’re effected by many factors: work, stress, increasing fatigue, bad weather etc. Someday it’s hard to fight your will to stay at home and skip the training.",
+			"arrow": {
+				"regular_text": "We represent you a new pre-training complex",
+				"highlighted_text": "Fine Fit"
+			},
+			"second_p": "- a special drink that activates the forces inside of you, eliminates laziness, lift ups mood and adds maximum energy.",
+			"third_p": "No matter how tired you may be, you will not only have the strength and desire for training, but its effectiveness will increase",
+			"highlighted_p": "at least 7 times"
+		}
+	}
+}

@@ -1,6 +1,5 @@
 .warning_overlay.d-flex.justify-content-center.align-items-center
   img(src='img/icons/warning_icon.png', alt='')
   p.warning
-    span WARNING!
-    |  Because of all the media attention our stores are struggling to keep the stocks up. As of
-    |             March 31 2017, we have a limited supply of products to ship within 24 hours.
+    span #{warning_message.warning_span}
+    | #{warning_message.warning_text}
