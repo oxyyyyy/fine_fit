@@ -1,9 +1,9 @@
 doctype html
-html(lang='en')
+html(lang='#{current_lang}')
 
 	include include/head
 
-	body.index
+	body(class='#{current_lang}').index
 		.page_wrapper
 
 			header
@@ -76,40 +76,25 @@ html(lang='en')
 			section.complex
 				.container
 					.section_title_overlay
-						h2.section_title
-							| Fine Fit is a completely natural complex,
+						h2.section_title #{sections.complex.section_title}
 							br
-							span consisting exclusively of extracts of plants and vitamins
+							span #{sections.complex.section_subtitle}
 					.d-flex.flex-column.flex-md-row.justify-content-between.align-items-start
 						.complex_column.left_complex_column
-							p
-								| Fine Fit has nothing to do with chemical energy drinks, which damage your health. It’s a completely natural drink
-								| with a strong stimulating effect. It makes workouts as intense and pleasant as possible.
-							p
-								| Fine Fit should be taken straight before training. Thanks to the special substances that make up the complex,
-								| it expands the blood vessels and enhances the blood flow, which results in active saturation of muscle tissue
-								| with nutrients and oxygen.
+							p #{sections.complex.left_top_text}
+							p #{sections.complex.left_bottom_text}
 						.complex_column.center_complex_column.hidden-sm-down.d-flex.justify-content-center
 							img(src='img/man_with_bottle.png', alt='')
 						.complex_column.right_complex_column
-							p
-								| All Fine Fit substances are in an easily digestible form, so that effect is nearly instantaneous.
-								br
-								| A person
-								|               feels a huge surge of energy and there’s no trace left from laziness and apathy.
+							p #{sections.complex.right_top_before_br_text}<br>#{sections.complex.right_top_after_br_text}
 							p.bold
-								span.highlight Geranium Extract (DMAA) is the main element of Fine Fit consist.
-								br
-								| It’s a powerful
-								|               stimulant. 10 times stronger and much softer than caffeine.
-								br
-								span.highlight It increases mood, gives energy.
+								<span class="highlight">#{sections.complex.right_bottom_first_highlighted_text}</span><br>#{sections.complex.right_bottom_text}<br><span class="highlight">#{sections.complex.right_bottom_second_highlighted_text}</span>
 					include include/section_arrow_and_button
 
 			section.effects_and_benefits
 				.container
 					.section_title_overlay
-						h2.section_title All effects and benefits of Fine Fit
+						h2.section_title #{sections.effects_and_benefits.section_title}
 					.d-flex.justify-content-center.align-items-center
 						.effects_and_benefits_img_container
 							img.hidden-md-down(src='img/one_bottle_and_molekul.png', alt='')
@@ -117,127 +102,127 @@ html(lang='en')
 							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
 								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
 								.effects_and_benefits_point_text
-									p.effects_and_benefits_point_title.bold Boosts the endurance, strength and productivity of the training.
-									p.effects_and_benefits_point_desc You will do more and be tired less.
+									p.effects_and_benefits_point_title.bold #{sections.effects_and_benefits.points_list.point_1.bold_text}
+									p.effects_and_benefits_point_desc #{sections.effects_and_benefits.points_list.point_1.regular_text}
 							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
 								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
 								.effects_and_benefits_point_text
-									p.effects_and_benefits_point_title.bold Accelerates the recovery process after exhausting loads.
-									p.effects_and_benefits_point_desc Even after an active workout, you won’t feel drained nor tired.
+									p.effects_and_benefits_point_title.bold #{sections.effects_and_benefits.points_list.point_2.bold_text}
+									p.effects_and_benefits_point_desc #{sections.effects_and_benefits.points_list.point_2.regular_text}
 							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
 								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
 								.effects_and_benefits_point_text
-									p.effects_and_benefits_point_title.bold Increases the speed of muscle mass gain.
-									p.effects_and_benefits_point_desc Creates perfect conditions for muscle mass growth.
+									p.effects_and_benefits_point_title.bold #{sections.effects_and_benefits.points_list.point_3.bold_text}
+									p.effects_and_benefits_point_desc #{sections.effects_and_benefits.points_list.point_3.regular_text}
 							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
 								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
 								.effects_and_benefits_point_text
-									p.effects_and_benefits_point_title.bold Accelerates metabolism, increases fat burning, suppresses appetite.
-									p.effects_and_benefits_point_desc You can quickly lose those extra kilos.
+									p.effects_and_benefits_point_title.bold #{sections.effects_and_benefits.points_list.point_4.bold_text}
+									p.effects_and_benefits_point_desc #{sections.effects_and_benefits.points_list.point_4.regular_text}
 							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
 								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
 								.effects_and_benefits_point_text
-									p.effects_and_benefits_point_title.bold Lifts up spirit, eliminates apathy.
-									p.effects_and_benefits_point_desc You'll want to go to workout.
+									p.effects_and_benefits_point_title.bold #{sections.effects_and_benefits.points_list.point_5.bold_text}
+									p.effects_and_benefits_point_desc #{sections.effects_and_benefits.points_list.point_5.regular_text}
 							li.effects_and_benefits_point.d-flex.justify-content-start.align-items-center
 								img.check_mark_circle(src='img/icons/check_mark_circle.png', alt='')
 								.effects_and_benefits_point_text
-									p.effects_and_benefits_point_title.bold Raise mental capacity and improves the focus of consciousness.
-									p.effects_and_benefits_point_desc If you are engaged in mental work, Fine Fit will increase its effectiveness.
+									p.effects_and_benefits_point_title.bold #{sections.effects_and_benefits.points_list.point_6.bold_text}
+									p.effects_and_benefits_point_desc #{sections.effects_and_benefits.points_list.point_6.regular_text}
 
 			section.perfect_if
 				.container
 					.section_title_overlay
-						h2.section_title Fine Fit is perfect for you, if you’re:
+						h2.section_title #{sections.perfect_if.section_title}
 					ul#perfect_if_bx_slider.perfect_if_cards_container
 						li.perfect_if_big_card.d-flex.flex-column.justify-content-between.align-items-start
 							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon1.png', alt='')
-							p.bold Professional athlet
+							p.bold #{sections.perfect_if.tiles.large_tile}
 						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
 							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon2.png', alt='')
-							p.bold Doing power trainings
+							p.bold #{sections.perfect_if.tiles.small_tile_1}
 						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
 							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon3.png', alt='')
-							p.bold Doing intellectual
+							p.bold #{sections.perfect_if.tiles.small_tile_2}
 						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
 							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon4.png', alt='')
-							p.bold Into active lifestylework
+							p.bold #{sections.perfect_if.tiles.small_tile_3}
 						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
 							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon5.png', alt='')
-							p.bold Engaged in fitness
+							p.bold #{sections.perfect_if.tiles.small_tile_4}
 						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
 							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon6.png', alt='')
-							p.bold Working much and often
+							p.bold #{sections.perfect_if.tiles.small_tile_5}
 						li.perfect_if_small_card.d-flex.flex-column.justify-content-between.align-items-start
 							img.perfect_if_card_icon(src='img/icons/section_perfect_if/section_perfect_if_icon7.png', alt='')
-							p.bold Night disco lover
+							p.bold #{sections.perfect_if.tiles.small_tile_6}
 					include include/section_arrow_and_button
 
 			section.way
 				.container
 					.section_title_overlay
-						h2.section_title Way to take Fine Fit
+						h2.section_title #{sections.way.section_title}
 					div.d-flex.flex-column.flex-md-row.justify-content-center.align-items-center
 						ul.way_list
 							li.way_list_point.d-flex.justify-content-start.align-items-center
 								img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_1.png', alt='')
-								p.bold Dilute <span class="green">1 teaspoon in a glass of water,</span> juice or <br>low-fat milk
+								p.bold #{sections.way.list.point_1.text_before_green} <span class="green">#{sections.way.list.point_1.text_green}</span> #{sections.way.list.point_1.text_after_green} <br>#{sections.way.list.point_1.text_after_br}
 							li.way_list_point.d-flex.justify-content-start.align-items-center
 								img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_2.png', alt='')
-								p.bold <span class="green">Drink cocktail</span> in 40 min before training
+								p.bold <span class="green">#{sections.way.list.point_2.text_green}</span> #{sections.way.list.point_2.text_after_green}
 							li.way_list_point.d-flex.justify-content-start.align-items-center
 								img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_3.png', alt='')
-								p.bold <span class="green">Do workout</span> with increased efficiency and desire,<br> feel a powerful burst of energy
+								p.bold <span class="green">#{sections.way.list.point_3.text_green}</span> #{sections.way.list.point_3.text_before_br}<br> #{sections.way.list.point_3.text_after_br}
 							li.way_list_point.d-flex.justify-content-start.align-items-center
 								img.way_list_point_icon(src='img/icons/section_way/way_list_point_icon_4.png', alt='')
-								p.bold <span class="green">Do not exceed a dose</span> of more than 2 teaspoons<br> per day; <span class="green">do not use Fine Fit</span> at least 3 hours<br> before bedtime
+								p.bold <span class="green">#{sections.way.list.point_4.text_green_first}</span> #{sections.way.list.point_4.text_before_br_first}<br> #{sections.way.list.point_4.text_after_br_first} <span class="green">#{sections.way.list.point_4.text_green_second}</span> #{sections.way.list.point_4.text_before_br_second}<br> #{sections.way.list.point_4.text_after_br_second}
 						img.way_glass_and_molekul(src='img/glass_and_molekul.png', alt='')
 					include include/way_sharp_arrow
 
 			section.is
 				.container
 					.section_title_overlay
-						h2.section_title Fine Fit is…
+						h2.section_title #{sections.is.section_title}
 					ul#is_points_bx_slider.is_points_container.d-flex.justify-content-around.align-items-center
 						li.is_column_points_container
 							.is_point.d-flex.flex-column.justify-content-center.align-items-center
 								img.is_point_icon(src='img/icons/section_is/is_icon_1.png', alt='')
-								h3.is_point_title.bold.green Geranium Extract (DMAA)
-								p.is_point_text A powerful stimulant. 10 times stronger than caffeine and much softer. It improves mood and gives energy.
+								h3.is_point_title.bold.green #{sections.is.list.point_1.bold_text}
+								p.is_point_text #{sections.is.list.point_1.regular_text}
 							.is_point.d-flex.flex-column.justify-content-center.align-items-center
 								img.is_point_icon(src='img/icons/section_is/is_icon_2.png', alt='')
-								h3.is_point_title.bold.green Creatine monohydrate
-								p.is_point_text Improves the digestibility of substances, provides a synergistic effect.
+								h3.is_point_title.bold.green #{sections.is.list.point_2.bold_text}
+								p.is_point_text #{sections.is.list.point_2.regular_text}
 							.is_point.d-flex.flex-column.justify-content-center.align-items-center
 								img.is_point_icon(src='img/icons/section_is/is_icon_3.png', alt='')
-								h3.is_point_title.bold.green Arginine nitrate
-								p.is_point_text Activates "pumping", causes a powerful pumping effect of muscles.
+								h3.is_point_title.bold.green #{sections.is.list.point_3.bold_text}
+								p.is_point_text #{sections.is.list.point_3.regular_text}
 						li.is_column_points_container
 							.is_point.d-flex.flex-column.justify-content-center.align-items-center
 								img.is_point_icon(src='img/icons/section_is/is_icon_4.png', alt='')
-								h3.is_point_title.bold.green Schizandrol
-								p.is_point_text Improves physical vigor. Provides a strong stimulating effect.
+								h3.is_point_title.bold.green #{sections.is.list.point_4.bold_text}
+								p.is_point_text #{sections.is.list.point_4.regular_text}
 							.is_point.d-flex.flex-column.justify-content-center.align-items-center
 								img.is_point_icon(src='img/icons/section_is/is_icon_5.png', alt='')
-								h3.is_point_title.bold.green Yohimbe extract
-								p.is_point_text Stimulates the central nervous system, relieves fatigue, raises mood, increases libido.
+								h3.is_point_title.bold.green #{sections.is.list.point_5.bold_text}
+								p.is_point_text #{sections.is.list.point_5.regular_text}
 							.is_point.d-flex.flex-column.justify-content-center.align-items-center
 								img.is_point_icon(src='img/icons/section_is/is_icon_6.png', alt='')
-								h3.is_point_title.bold.green Sodium phosphate
-								p.is_point_text Increases endurance and adaptation to training loads.
+								h3.is_point_title.bold.green #{sections.is.list.point_6.bold_text}
+								p.is_point_text #{sections.is.list.point_6.regular_text}
 						li.is_column_points_container
 							.is_point.d-flex.flex-column.justify-content-center.align-items-center
 								img.is_point_icon(src='img/icons/section_is/is_icon_7.png', alt='')
-								h3.is_point_title.bold.green Schizandrol
-								p.is_point_text Improves physical vigor. Provides a strong stimulating effect.
+								h3.is_point_title.bold.green #{sections.is.list.point_7.bold_text}
+								p.is_point_text #{sections.is.list.point_7.regular_text}
 							.is_point.d-flex.flex-column.justify-content-center.align-items-center
 								img.is_point_icon(src='img/icons/section_is/is_icon_8.png', alt='')
-								h3.is_point_title.bold.green Yohimbe extract
-								p.is_point_text Stimulates the central nervous system, relieves fatigue, raises mood, increases libido.
+								h3.is_point_title.bold.green #{sections.is.list.point_8.bold_text}
+								p.is_point_text #{sections.is.list.point_8.regular_text}
 							.is_point.d-flex.flex-column.justify-content-center.align-items-center
 								img.is_point_icon(src='img/icons/section_is/is_icon_9.png', alt='')
-								h3.is_point_title.bold.green Sodium phosphate
-								p.is_point_text Increases endurance and adaptation to training loads.
+								h3.is_point_title.bold.green #{sections.is.list.point_9.bold_text}
+								p.is_point_text #{sections.is.list.point_9.regular_text}
 
 			section.doctor
 				.container

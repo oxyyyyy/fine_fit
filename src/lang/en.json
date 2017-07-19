@@ -1,5 +1,8 @@
 {
+	"current_lang": "en",
+
 	"title" : "Fine Fit",
+
 	"button": "easy purchase",
 	"section_arrow_and_button": {
 		"title": "we keep performing!",
@@ -9,6 +12,7 @@
 		"warning_span": "WARNING!",
 		"warning_text": "Because of all the media attention our stores are struggling to keep the stocks up. As of March 31 2017, we have a limited supply of products to ship within 24 hours."
 	},
+
 	"header": {
 		"header_top_text": "Increase the effectiveness of training at least 7 times!",
 		"header_h1": "Fine Fit :",
@@ -24,7 +28,9 @@
 		},
 		"tv": "as seen on tv:"
 	},
+
 	"sections": {
+
 		"for_those": {
 			"section_title": "For those who do not want to be lazy and skip workouts",
 			"first_p": "Each day we’re effected by many factors: work, stress, increasing fatigue, bad weather etc. Someday it’s hard to fight your will to stay at home and skip the training.",
@@ -35,6 +41,133 @@
 			"second_p": "- a special drink that activates the forces inside of you, eliminates laziness, lift ups mood and adds maximum energy.",
 			"third_p": "No matter how tired you may be, you will not only have the strength and desire for training, but its effectiveness will increase",
 			"highlighted_p": "at least 7 times"
+		},
+
+		"complex": {
+			"section_title": "Fine Fit is a completely natural complex,",
+			"section_subtitle": "consisting exclusively of extracts of plants and vitamins",
+			"left_top_text": "Fine Fit has nothing to do with chemical energy drinks, which damage your health. It’s a completely natural drink with a strong stimulating effect. It makes workouts as intense and pleasant as possible.",
+			"left_bottom_text": "Fine Fit should be taken straight before training. Thanks to the special substances that make up the complex, it expands the blood vessels and enhances the blood flow, which results in active saturation of muscle tissue with nutrients and oxygen.",
+			"right_top_before_br_text": "All Fine Fit substances are in an easily digestible form, so that effect is nearly instantaneous.",
+			"right_top_after_br_text": "A person feels a huge surge of energy and there’s no trace left from laziness and apathy.",
+			"right_bottom_first_highlighted_text": "Geranium Extract (DMAA) is the main element of Fine Fit consist.",
+			"right_bottom_text": "It’s a powerful stimulant. 10 times stronger and much softer than caffeine.",
+			"right_bottom_second_highlighted_text": "It increases mood, gives energy."
+		},
+
+		"effects_and_benefits": {
+			"section_title": "All effects and benefits of Fine Fit",
+			"points_list": {
+				"point_1": {
+					"bold_text": "Boosts the endurance, strength and productivity of the training.",
+					"regular_text": "You will do more and be tired less."
+				},
+				"point_2": {
+					"bold_text": "Accelerates the recovery process after exhausting loads.",
+					"regular_text": "Even after an active workout, you won’t feel drained nor tired."
+				},
+				"point_3": {
+					"bold_text": "Increases the speed of muscle mass gain.",
+					"regular_text": "Creates perfect conditions for muscle mass growth."
+				},
+				"point_4": {
+					"bold_text": "Accelerates metabolism, increases fat burning, suppresses appetite.",
+					"regular_text": "You can quickly lose those extra kilos."
+				},
+				"point_5": {
+					"bold_text": "Lifts up spirit, eliminates apathy.",
+					"regular_text": "You'll want to go to workout."
+				},
+				"point_6": {
+					"bold_text": "Raise mental capacity and improves the focus of consciousness.",
+					"regular_text": "If you are engaged in mental work, Fine Fit will increase its effectiveness."
+				}
+			}
+		},
+
+		"perfect_if": {
+			"section_title": "Fine Fit is perfect for you, if you’re:",
+			"tiles": {
+				"large_tile": "Professional athlet",
+				"small_tile_1": "Doing power trainings",
+				"small_tile_2": "Doing intellectual",
+				"small_tile_3": "Into active lifestylework",
+				"small_tile_4": "Engaged in fitness",
+				"small_tile_5": "Working much and often",
+				"small_tile_6": "Night disco lover"
+			}
+		},
+
+		"way": {
+			"section_title": "Way to take Fine Fit",
+			"list": {
+				"point_1": {
+					"text_before_green": "Dilute",
+					"text_green": "1 teaspoon in a glass of water,",
+					"text_after_green": "juice or",
+					"text_after_br": "low-fat milk"
+				},
+				"point_2": {
+					"text_green": "Drink cocktail",
+					"text_after_green": "in 40 min before training"
+				},
+				"point_3": {
+					"text_green": "Do workout",
+					"text_before_br": "with increased efficiency and desire,",
+					"text_after_br": "feel a powerful burst of energy"
+				},
+				"point_4": {
+					"text_green_first": "Do not exceed a dose",
+					"text_before_br_first": "of more than 2 teaspoons",
+					"text_after_br_first": "per day;",
+					"text_green_second": "do not use Fine Fit",
+					"text_before_br_second": "at least 3 hours",
+					"text_after_br_second": "before bedtime"
+				}
+			}
+		},
+
+		"is": {
+			"section_title": "Fine Fit is…",
+			"list": {
+				"point_1": {
+					"bold_text": "Geranium Extract (DMAA)",
+					"regular_text": "A powerful stimulant. 10 times stronger than caffeine and much softer. It improves mood and gives energy."
+				},
+				"point_2": {
+					"bold_text": "Creatine monohydrate",
+					"regular_text": "Improves the digestibility of substances, provides a synergistic effect."
+				},
+				"point_3": {
+					"bold_text": "Arginine nitrate",
+					"regular_text": "Activates \"pumping\", causes a powerful pumping effect of muscles."
+				},
+				"point_4": {
+					"bold_text": "Schizandrol",
+					"regular_text": "Improves physical vigor. Provides a strong stimulating effect."
+				},
+				"point_5": {
+					"bold_text": "Yohimbe extract",
+					"regular_text": "Stimulates the central nervous system, relieves fatigue, raises mood, increases libido."
+				},
+				"point_6": {
+					"bold_text": "Sodium phosphate",
+					"regular_text": "Increases endurance and adaptation to training loads."
+				},
+				"point_7": {
+					"bold_text": "Methylxanthines",
+					"regular_text": "Increase the effectiveness of physical and mental activity, accelerate reactions and relieve depressed and anxious states."
+				},
+				"point_8": {
+					"bold_text": "Beet extract",
+					"regular_text": "Optimizes recovery processes, enhances immunity, prevents fatigue."
+				},
+				"point_9": {
+					"bold_text": "Beta Alanine",
+					"regular_text": "Disperses lactic acid, removes muscle soreness after training, eliminates muscle spasms."
+				}
+			}
 		}
+
 	}
 }
