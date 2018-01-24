@@ -1207,7 +1207,7 @@ footer {
     margin-right: 15px; }
   footer .footer_credit_cards .credit_card_visa, footer .footer_credit_cards .credit_card_visa_electron, footer .footer_credit_cards .credit_card_mastercard, footer .footer_credit_cards .credit_card_paypal, footer .footer_credit_cards .credit_card_american_express {
     background-size: cover !important;
-    width: 34px;
+    width: 35px;
     height: 22px;
     margin: 3px; }
   footer .footer_credit_cards .credit_card_visa {
